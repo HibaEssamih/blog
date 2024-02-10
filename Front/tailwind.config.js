@@ -8,6 +8,7 @@ module.exports = {
 
     // Or if using `src` directory:
     "./src/**/*.{js,ts,jsx,tsx}",
+    "./node_modules/flowbite/**/*.js"
   ],
   theme: {
     colors: {
@@ -23,6 +24,7 @@ module.exports = {
       grey500: '#ECECEC',
       bgpink: "#FCF5EF",
       burnt:"#A26262",
+      burntmedium:"#b58383",
       shemas:"#61a2a2",
       bgpurple: '#451F49',
       emailbg: '#6a4c6d',
@@ -174,6 +176,30 @@ module.exports = {
         800: "#3730a3",
         900: "#312e81",
       },
+      neutral:{
+        50: "#fafafa",
+        100: "#f5f5f5",
+        200: "#e5e5e5",
+        300: "#d4d4d4",
+        400: "#a3a3a3",
+        500: "#737373",
+        600: "#525252",
+        700: "#404040",
+        800: "#262626",
+        900: "#171717",
+      },
+      rose:{
+        50: "#fff1f2",
+        100: "#ffe4e6",
+        200: "#fecdd3",
+        300: "#fda4af",
+        400: "#fb7185",
+        500: "#f43f5e",
+        600: "#e11d48",
+        700: "#be123c",
+        800: "#9f1239",
+        900: "#881337",
+      },
       purple: {
         50: "#faf5ff",
         100: "#f3e8ff",
@@ -245,24 +271,6 @@ module.exports = {
     fontFamily: {
       'inter': ['Inter', "sans-serif"]
     },
-    fontSize: {
-      xs: ['0.75rem', { lineHeight: '1rem' }],
-      sm: ['0.875rem', { lineHeight: '1.25rem' }],
-      base: ['1rem', { lineHeight: '1.5rem' }],
-      lg: ['1.125rem', { lineHeight: '1.75rem' }],
-      xl: ['1.25rem', { lineHeight: '1.75rem' }],
-      '2xl': ['1.5rem', { lineHeight: '2rem' }],
-      '3xl': ['1.875rem', { lineHeight: '2.25rem' }],
-      '4xl': ['2.25rem', { lineHeight: '2.5rem' }],
-      '5xl': ['3rem', { lineHeight: '1' }],
-      '6xl': ['3.75rem', { lineHeight: '1' }],
-      '7xl': ['4.5rem', { lineHeight: '1' }],
-      '8xl': ['6rem', { lineHeight: '1' }],
-      '9xl': ['8rem', { lineHeight: '1' }],
-      '15px': ['15px', { lineHeight: '1' }],
-      '75px': ['75px', { lineHeight: '1' }],
-
-    },
     width: ({ theme }) => ({
       auto: 'auto',
       ...theme('spacing'),
@@ -308,5 +316,7 @@ module.exports = {
       }
     },
   },
-  plugins: [],
+  plugins: [
+    require('flowbite/plugin')
+  ],
 }

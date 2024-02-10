@@ -12,9 +12,9 @@
 }
 
 html {
-  --scroll-behavior: smooth!important;
-  scroll-behavior: smooth!important;
-  }
+  --scroll-behavior: smooth !important;
+  scroll-behavior: smooth !important;
+}
 
 body {
   margin: 0;
@@ -86,17 +86,102 @@ html:not([data-scroll="0"]) .navbar {
   box-shadow: 0px 4px 20px rgba(110, 127, 185, 0.1);
 }
 
-.footer-icons{
+.footer-icons {
   transition: .5s;
 }
 
-.footer-icons:hover{
+.footer-icons:hover {
   transform: translateY(-8px);
 }
 
 .space-links {
   transition: .3s;
 }
+
 .space-links:hover {
   letter-spacing: 1px;
+}
+
+/* Styles for the previous and next buttons */
+.slick-prev,
+.slick-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+  width: 40px;
+  /* Set the width of the buttons */
+  height: 40px;
+  /* Set the height of the buttons */
+  padding: 5px;
+  border: none;
+  /* Remove default border */
+  background: none;
+  /* Remove default background */
+  cursor: pointer;
+  /* Add pointer cursor */
+  transition: background-color 0.3s ease;
+  /* Add transition for smoother hover effect */
+  display: flex; /* Use flexbox for centering */
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+
+}
+
+.slick-prev {
+  left: -24px;
+  /* Adjust the left position for the previous button */
+}
+
+.slick-next {
+  right: -24px;
+  /* Adjust the right position for the next button */
+}
+
+/* Apply your button styles to the previous and next buttons */
+.slick-prev::before,
+.slick-next::before {
+  content: "";
+  /* Add empty content to allow pseudo-element styling */
+  display: inline-block;
+  width: 100%;
+  /* Set the width of the buttons */
+  height: 100%;
+  /* Set the height of the buttons */
+  border-radius: 50%;
+  /* Make the buttons circular */
+  background-color: transparent;
+  /* Change the background color of the buttons */
+  /* transition: background-color 0.3s ease; */
+  /* Add transition for smoother hover effect */
+
+}
+
+/* Styles for the buttons on hover state */
+.slick-prev:hover::before,
+.slick-next:hover::before {
+  background-color: #f6f6f6;
+  border: solid 1px #ebebeb;
+}
+
+/* Icon styles (adjust according to your SVG styles) */
+.slick-prev::before,
+.slick-next::before {
+  box-shadow:none;
+}
+
+.slick-prev::before {
+  content: url('./assets/prev.svg');
+  /* Replace with your left arrow SVG */
+  width: 100%;
+  height: 100%;
+
+}
+
+.slick-next::before {
+  content: url('./assets/next.svg');
+  /* Replace with your right arrow SVG */
+  width: 100%;
+  height: 100%;
+
 }

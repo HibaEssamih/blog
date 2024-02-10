@@ -87,10 +87,10 @@ const Contactusform = () => {
                       src={logo}
                       alt="Your Company"
                     />
-                    <p className="mb-8 lg:mb-16 mt-8 font-light text-center text-gray-500 dark:text-gray-400 sm:text-xl">Contact us now? Want to send us a feedback?</p>
+                    <p className="mb-8 lg:mb-16 mt-8 font-light text-center text-gray-500  sm:text-xl">Contact us now? Want to send us a feedback?</p>
                     <form action="#" className="space-y-8" onSubmit={handleSubmit}>
                       <div>
-                        <label htmlFor="text" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Your Name</label>
+                        <label htmlFor="text" className="block mb-2 text-sm font-medium text-gray-900 ">Your Name</label>
                         <input
                           id="text"
                           name="input1"
@@ -104,7 +104,7 @@ const Contactusform = () => {
                         />
                       </div>
                       <div>
-                        <label htmlFor="email" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Your email</label>
+                        <label htmlFor="email" className="block mb-2 text-sm font-medium text-gray-900 ">Your email</label>
                         <input
                           id="email"
                           name="input2"
@@ -118,7 +118,7 @@ const Contactusform = () => {
                         />
                       </div>
                       <div className="sm:col-span-2">
-                        <label htmlFor="message" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Your message</label>
+                        <label htmlFor="message" className="block mb-2 text-sm font-medium text-gray-900">Your message</label>
                         <textarea
                           id="message"
                           name="input3"
@@ -130,7 +130,7 @@ const Contactusform = () => {
                         type="submit"
                         onClick={handleClick}
                         disabled={isDisabled}
-                        className="py-3 px-5 text-sm disabled:opacity-50 font-medium w-full text-center text-white rounded-lg bg-burnt  hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
+                        className="py-3 px-5 text-sm disabled:opacity-50 font-medium w-full text-center text-white rounded-lg bg-burnt  hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 "
                       >
                         Send message
                       </button>
