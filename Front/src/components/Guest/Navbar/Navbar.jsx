@@ -1,12 +1,11 @@
 import { Disclosure } from '@headlessui/react';
 import { Bars3Icon } from '@heroicons/react/24/outline';
-import { Link } from "react-router-dom";
+import { Link, useLocation  } from "react-router-dom";
 import React from 'react';
 import Drawer from "./Drawer";
 import Drawerdata from "./Drawerdata";
 // import Signdialog from "./Signdialog";
 // import Registerdialog from "./Registerdialog";
-import Contactus from "./Contactus";
 import { logo } from '../../../assets'
 import Blog from './Blog';
 
@@ -16,9 +15,9 @@ import Blog from './Blog';
 const navigation = [
     // { name: 'Home', href: '', current: true },
     // { name: 'Blogs', href: '', current: false },
-    { name: 'Tools', href: '', current: false },
-    { name: 'Shop', href: '', current: false },
-    { name: 'Join', href: '', current: false },
+    { name: 'Tools', href: 'tools', current: false },
+    { name: 'Shop', href: 'allProducts', current: false },
+    { name: 'Contact Us', href: 'contactUs', current: false },
 ];
 
 function classNames(...classes) {
@@ -26,6 +25,7 @@ function classNames(...classes) {
 }
 
 const Navbar = () => {
+    const location = useLocation();
 
     const [isOpen, setIsOpen] = React.useState(false);
 
@@ -56,24 +56,25 @@ const Navbar = () => {
                             <div className="hidden lg:ml-14 ml-4 mdt:block">
                                 <div className="flex space-x-4 items-center h-full  ">
                                     <Link
+                                    to={`/`}
                                         className={classNames(
-                                            isOpen ? ' text-purple' : 'hover:text-purple',
-                                            'px-3 py-4 text-15px font-normal space-links'
+                                            location.pathname === '/' ? ' text-burnt' : 'hover:text-burnt',
+                                            'px-3 py-4 text-15px font-normal '
                                         )}
                                     >
                                         Home
                                     </Link>
-                                    
-                                        <Blog/>
-                                   
+
+                                    <Blog />
+
 
                                     {navigation.map((item) => (
                                         <Link
                                             key={item.name}
                                             to={`/${item.href}`}
                                             className={classNames(
-                                                item.current ? ' text-purple' : 'hover:text-purple',
-                                                'px-3 py-4 text-15px font-normal space-links'
+                                                location.pathname === `/${item.href}` ? ' text-burnt' : 'hover:text-burnt',
+                                                'px-3 py-4 text-15px font-normal '
                                             )}
                                             aria-current={item.href ? 'page' : undefined}
                                         >
@@ -81,7 +82,6 @@ const Navbar = () => {
                                         </Link>
                                     ))}
 
-                                    <Contactus />
                                 </div>
                             </div>
                         </div>
@@ -100,9 +100,11 @@ const Navbar = () => {
 
                         <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto  sm:pr-0">
                             <div className='hidden mdt:block'>
-                                <button className="bg-burnt hover:bg-burnt hover:text-white text-white text-15px font-medium ml-8 py-4 px-5 rounded" >
-                                    Sign In
-                                </button>
+                                <Link to="/login">
+                                    <button className="bg-burnt hover:bg-[#8d5454] hover:text-white text-white text-15px font-medium ml-8 py-3 px-6 rounded" >
+                                        Sign In
+                                    </button>
+                                </Link>
                             </div>
                         </div>
 

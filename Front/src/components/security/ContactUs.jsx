@@ -69,15 +69,15 @@ const ContactUs = () => {
                             <form class="grid grid-cols-1 gap-6" action="#" method="post">
                                 <label class="block">
                                     <span class="nc-Label  text-neutral-800 font-medium text-sm " data-nc-id="Label">Full name</span>
-                                    <input type="text" class="block w-full border border-neutral-200 focus:border-primary-300 focus:ring focus:ring-primary-200/50 bg-white  rounded-full text-sm font-normal h-11 px-4 py-3 mt-1" placeholder="Example Doe" />
+                                    <input type="text" class="block w-full border border-neutral-200 focus:border-blue-300 focus:ring focus:ring-blue-200/50 bg-white  rounded-full text-sm font-normal h-11 px-4 py-3 mt-1" placeholder="Example Doe" />
                                 </label>
                                 <label class="block">
                                     <span class="nc-Label  text-neutral-800 font-medium text-sm " data-nc-id="Label">Email address</span>
-                                    <input type="email" class="block w-full border border-neutral-200 focus:border-primary-300 focus:ring focus:ring-primary-200/50 bg-white  rounded-full text-sm font-normal h-11 px-4 py-3 mt-1" autoComplete="current-email" required placeholder="example@example.com" />
+                                    <input type="email" class="block w-full border border-neutral-200 focus:border-blue-300 focus:ring focus:ring-blue-200/50 bg-white  rounded-full text-sm font-normal h-11 px-4 py-3 mt-1" autoComplete="current-email" required placeholder="example@example.com" />
                                 </label>
                                 <label class="block">
                                     <span class="nc-Label  text-neutral-800 font-medium text-sm " data-nc-id="Label">Message</span>
-                                    <textarea class="border block w-full text-sm rounded-xl border-neutral-200 focus:border-primary-300 focus:ring focus:ring-primary-200 focus:ring-opacity-50 p-[6px] mt-2 bg-white " rows="6"></textarea>
+                                    <textarea class="border block w-full text-sm rounded-xl border-neutral-200 focus:border-blue-300 focus:ring focus:ring-blue-200 focus:ring-opacity-50 p-[6px] mt-2 bg-white " rows="6"></textarea>
                                 </label>
                                 <button class="nc-Button flex-shrink-0 relative h-auto inline-flex items-center justify-center rounded-full transition-colors border-transparent bg-burnt hover:bg-burntmedium text-neutral-100 text-sm sm:text-base font-medium py-3 px-4 sm:py-3.5 sm:px-6  " type="submit">Send Message</button>
                             </form>

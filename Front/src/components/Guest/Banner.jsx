@@ -1,9 +1,10 @@
 import React from 'react'
 
-import { shopbann, getfree , banner1, Hero1, topic1, topic2, topic3, topic4, topic5, topic6, topic7, topic8, topic9, topic10 } from '../../assets'
+import { shopbann, getfree, banner1, Hero1, topic1, topic2, topic3, topic4, topic5, topic6, topic7, topic8, topic9, topic10 } from '../../assets'
 import Slider from "react-slick";
 import Carousel from './Carousel';
 import { useMediaQuery } from 'react-responsive';
+import Nav from './Nav';
 
 
 const Banner = () => {
@@ -55,7 +56,7 @@ const Banner = () => {
 
     return (
         <>
-
+            <Nav />
             <div class="flex items-center lg:flex-row flex-col mx-0 lg:m-8 px-6">
 
                 <div className='flex-1 lg:w-[50%] w-full max-w-full p-4 lg:max-w-[50%] '>
@@ -328,7 +329,7 @@ const Banner = () => {
                                 <a class="transition-colors hover:text-white duration-300 nc-Badge  inline-flex px-2.5 py-1 rounded-full font-medium text-xs relative text-red-800 bg-red-100 hover:bg-red-800" href="/archive/the-demo-archive-slug">Electronics</a>
                             </div>
                         </div>
-                        <a class="absolute inset-0" href="/single/this-is-single-slug"></a>
+                        <a class="absolute inset-0" href="/single "></a>
                         <div class="mt-5 px-4 flex flex-col">
                             <div class="space-y-3">
                                 <div class="nc-PostCardMeta inline-flex items-center flex-wrap text-neutral-800 relative text-sm">
@@ -336,7 +337,7 @@ const Banner = () => {
                                     <span class="text-neutral-500  font-normal">May 20, 2021</span>
                                 </div>
                                 <h2 class="nc-card-title block font-semibold text-neutral-900 0 text-base sm:text-lg md:text-xl">
-                                    <a class="line-clamp-2" title="Microsoft announces a five-year commitment to create bigger opportunities for people with disabilities" href="/single/this-is-single-slug">Microsoft announces a five-year commitment to create bigger opportunities for people with disabilities</a>
+                                    <a class="line-clamp-2" title="Microsoft announces a five-year commitment to create bigger opportunities for people with disabilities" href="/single ">Microsoft announces a five-year commitment to create bigger opportunities for people with disabilities</a>
                                 </h2>
                                 <span class="block text-neutral-500  text-[15px] leading-6 ">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione beatae quasi et, reprehenderit alias veritatis nostrum iste sed laboriosam eveniet possimus.</span>
                             </div>
@@ -373,14 +374,14 @@ const Banner = () => {
 
                     <div class="grid gap-6 md:gap-8">
                         <div class="nc-Card6 sm:shadow-md relative flex group flex-row items-center sm:p-4 sm:rounded-3xl sm:bg-white  sm:border border-neutral-200 h-full">
-                            <a class="absolute inset-0 z-0" href="/single/this-is-single-slug"></a>
+                            <a class="absolute inset-0 z-0" href="/single "></a>
                             <div class="flex flex-col flex-grow">
                                 <div class="space-y-3 mb-4">
                                     <div class="nc-CategoryBadgeList flex flex-wrap space-x-2" data-nc-id="CategoryBadgeList">
                                         <a class="transition-colors hover:text-white duration-300 nc-Badge  inline-flex px-2.5 py-1 rounded-full font-medium text-xs relative text-red-800 bg-red-100 hover:bg-red-800" href="/archive/the-demo-archive-slug">Electronics</a>
                                     </div>
                                     <h2 class="block font-semibold text-sm sm:text-base">
-                                        <a class="line-clamp-2" title="360-degree video: How Microsoft deployed a datacenter to the bottom of the ocean" href="/single/this-is-single-slug">360-degree video: How Microsoft deployed a datacenter to the bottom of the ocean</a>
+                                        <a class="line-clamp-2" title="360-degree video: How Microsoft deployed a datacenter to the bottom of the ocean" href="/single ">360-degree video: How Microsoft deployed a datacenter to the bottom of the ocean</a>
                                     </h2>
                                     <div class="nc-PostCardMeta inline-flex items-center flex-wrap text-neutral-800  leading-none text-xs">
                                         <span class="text-neutral-500  font-normal">May 20, 2021</span>
@@ -412,7 +413,7 @@ const Banner = () => {
                                     </div>
                                 </div>
                             </div>
-                            <a class="block relative flex-shrink-0 w-24 h-24 sm:w-40 sm:h-full ml-3 sm:ml-5 rounded-2xl overflow-hidden z-0" href="/single/this-is-single-slug">
+                            <a class="block relative flex-shrink-0 w-24 h-24 sm:w-40 sm:h-full ml-3 sm:ml-5 rounded-2xl overflow-hidden z-0" href="/single ">
                                 <img sizes="(max-width: 600px) 180px, 400px" src={topic10} class="object-cover absolute inset-0 w-full h-full" alt="360-degree video: How Microsoft deployed a datacenter to the bottom of the ocean" />
                                 <span class="absolute bottom-1 left-1">
                                     <div class="nc-PostTypeFeaturedIcon " data-nc-id="PostTypeFeaturedIcon">
@@ -421,14 +422,14 @@ const Banner = () => {
                             </a>
                         </div>
                         <div class="nc-Card6 sm:shadow-md relative flex group flex-row items-center sm:p-4 sm:rounded-3xl sm:bg-white  sm:border border-neutral-200  h-full">
-                            <a class="absolute inset-0 z-0" href="/single-video/this-is-single-slug"></a>
+                            <a class="absolute inset-0 z-0" href=" single"></a>
                             <div class="flex flex-col flex-grow">
                                 <div class="space-y-3 mb-4">
                                     <div class="nc-CategoryBadgeList flex flex-wrap space-x-2" data-nc-id="CategoryBadgeList">
                                         <a class="transition-colors hover:text-white duration-300 nc-Badge  inline-flex px-2.5 py-1 rounded-full font-medium text-xs relative text-yellow-800 bg-yellow-100 hover:bg-yellow-800" href="/archive/the-demo-archive-slug">Industrial</a>
                                     </div>
                                     <h2 class="block font-semibold text-sm sm:text-base">
-                                        <a class="line-clamp-2" title="To cool datacenter servers, Microsoft turns to boiling liquid Donec quis" href="/single-video/this-is-single-slug">To cool datacenter servers, Microsoft turns to boiling liquid Donec quis</a>
+                                        <a class="line-clamp-2" title="To cool datacenter servers, Microsoft turns to boiling liquid Donec quis" href=" single">To cool datacenter servers, Microsoft turns to boiling liquid Donec quis</a>
                                     </h2>
                                     <div class="nc-PostCardMeta inline-flex items-center flex-wrap text-neutral-800  leading-none text-xs">
                                         <span class="text-neutral-500  font-normal">May 20, 2021</span>
@@ -458,19 +459,19 @@ const Banner = () => {
                                     </div>
                                 </div>
                             </div>
-                            <a class="block relative flex-shrink-0 w-24 h-24 sm:w-40 sm:h-full ml-3 sm:ml-5 rounded-2xl overflow-hidden z-0" href="/single-video/this-is-single-slug">
+                            <a class="block relative flex-shrink-0 w-24 h-24 sm:w-40 sm:h-full ml-3 sm:ml-5 rounded-2xl overflow-hidden z-0" href=" single">
                                 <img sizes="(max-width: 600px) 180px, 400px" src={topic5} class=" object-cover absolute inset-0 w-full h-full" alt="To cool datacenter servers, Microsoft turns to boiling liquid Donec quis" />
                             </a>
                         </div>
                         <div class="nc-Card6 sm:shadow-md relative flex group flex-row items-center  sm:p-4 sm:rounded-3xl sm:bg-white  sm:border border-neutral-200  h-full">
-                            <a class="absolute inset-0 z-0" href="/single-video/this-is-single-slug"></a>
+                            <a class="absolute inset-0 z-0" href=" single"></a>
                             <div class="flex flex-col flex-grow">
                                 <div class="space-y-3 mb-4">
                                     <div class="nc-CategoryBadgeList flex flex-wrap space-x-2" data-nc-id="CategoryBadgeList">
                                         <a class="transition-colors hover:text-white duration-300 nc-Badge  inline-flex px-2.5 py-1 rounded-full font-medium text-xs relative text-red-800 bg-red-100 hover:bg-red-800" href="/archive/the-demo-archive-slug">Electronics</a>
                                     </div>
                                     <h2 class="block font-semibold text-sm sm:text-base">
-                                        <a class="line-clamp-2" title="Xbox connects people to help through Crisis Text Line and Aenean lectus" href="/single-video/this-is-single-slug">Xbox connects people to help through Crisis Text Line and Aenean lectus</a>
+                                        <a class="line-clamp-2" title="Xbox connects people to help through Crisis Text Line and Aenean lectus" href=" single">Xbox connects people to help through Crisis Text Line and Aenean lectus</a>
                                     </h2>
                                     <div class="nc-PostCardMeta inline-flex items-center flex-wrap text-neutral-800  leading-none text-xs">
                                         <span class="text-neutral-500  font-normal">May 20, 2021</span>
@@ -501,7 +502,7 @@ const Banner = () => {
                                     </div>
                                 </div>
                             </div>
-                            <a class="block relative flex-shrink-0 w-24 h-24 sm:w-40 sm:h-full ml-3 sm:ml-5 rounded-2xl overflow-hidden z-0" href="/single-video/this-is-single-slug">
+                            <a class="block relative flex-shrink-0 w-24 h-24 sm:w-40 sm:h-full ml-3 sm:ml-5 rounded-2xl overflow-hidden z-0" href=" single">
                                 <img sizes="(max-width: 600px) 180px, 400px" src={topic3} class="object-cover absolute inset-0 w-full h-full" alt="Xbox connects people to help through Crisis Text Line and Aenean lectus" />
                             </a>
                         </div>
@@ -525,8 +526,8 @@ const Banner = () => {
                 <div class="grid grid-cols-1 gap-6 md:gap-8">
                     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-8 mt-3">
                         <div class="nc-Card10 relative flex flex-col h-full">
-                            <a class="absolute inset-0" href="/single-gallery/this-is-single-slug"></a>
-                            <div class="block group rounded-3xl flex-shrink-0 relative w-full aspect-w-9 aspect-h-7 sm:aspect-h-9 overflow-hidden z-0">
+                            <a class="absolute inset-0" href="productDetail"></a>
+                            <div class="block group rounded-3xl flex-shrink-0 relative w-full aspect-w-9 aspect-h-7 cursor-pointer sm:aspect-h-9 overflow-hidden z-0">
                                 <div>
                                     <div class=" group group/cardGallerySlider nc-PostFeaturedMedia relative w-full h-full">
                                         <Carousel>
@@ -539,9 +540,9 @@ const Banner = () => {
                                     </div>
                                 </div>
                             </div>
-                            <div class="absolute top-3 inset-x-3 flex justify-between items-start space-x-4 z-10">
+                            <div class="absolute top-3 inset-x-3 flex justify-between items-start space-x-4  ">
                                 <div class="nc-CategoryBadgeList flex flex-wrap space-x-2" data-nc-id="CategoryBadgeList">
-                                    <a class="transition-colors hover:text-white duration-300 nc-Badge  inline-flex px-2.5 py-1 rounded-full font-medium text-xs relative text-pink-800 bg-pink-100 hover:bg-pink-800" href="/archive/the-demo-archive-slug">Planner</a>
+                                    <a class="transition-colors hover:text-white duration-300 nc-Badge  inline-flex px-2.5 py-1 rounded-full font-medium text-xs relative text-pink-800 bg-pink-100 hover:bg-pink-800" href="#">Planner</a>
                                 </div>
                                 <div class="nc-PostCardSaveAction flex items-center space-x-2 text-xs text-neutral-700  ">
                                     <button class="nc-NcBookmark relative rounded-full flex items-center justify-center h-8 w-8 bg-neutral-50 hover:bg-neutral-100 " title="Save to reading list">
@@ -549,29 +550,36 @@ const Banner = () => {
                                             <path stroke-linecap="round" stroke-linejoin="round" d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0111.186 0z"></path>
                                         </svg>
                                     </button>
+
                                 </div>
+
                             </div>
-                            <div class="space-y-2.5 mt-4">
-                                <div class="nc-PostCardMetaV2 inline-flex items-center flex-wrap text-neutral-800  leading-none text-xs">
-                                    <div class="relative flex items-center space-x-2">
-                                        <div>
-                                            <h2 class="block font-medium text-base">
-                                                <a class="line-clamp-1" href="/single-gallery/this-is-single-slug">People who inspired us in 2019 </a>
-                                            </h2>
-                                            <a class="flex mt-1.5 center" href="/author/the-demo-author-slug">
-                                                <span class="block text-burnt hover:text-neutral-500 font-semibold text-[20px]">1.2</span>
-                                                <span class="text-neutral-500  mx-[6px] font-medium">$</span>
-                                            </a>
+
+                            <div class="space-y-2 px-2.5 pt-3 pb-2.5">
+                                <div>
+                                    <h2 class="nc-ProductCard__title text-base font-semibold transition-colors">Round Buckle 1" Belt</h2>
+                                    <p class="text-sm text-slate-500 mt-1">Classic green</p>
+                                </div>
+                                <div class="flex justify-between items-end">
+                                    <div>
+                                        <div class="flex items-center border-2 border-green-500 rounded-lg py-1 px-2 md:py-1.5 md:px-2.5 text-sm font-medium">
+                                            <span class="text-green-500"> $68.00</span>
                                         </div>
+                                    </div>
+                                    <div class="flex items-center mb-0.5">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" class="w-5 h-5 pb-[1px] text-amber-400">
+                                            <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z" clip-rule="evenodd"></path>
+                                        </svg>
+                                        <span class="text-sm ml-1 text-slate-500">4.9 (85 reviews)</span>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="nc-Card10 relative flex flex-col h-full">
-                            <a class="absolute inset-0" href="/single-gallery/this-is-single-slug"></a>
+                            <a class="absolute inset-0" href=" productDetail"></a>
                             <div class="block group rounded-3xl flex-shrink-0 relative w-full aspect-w-9 aspect-h-7 sm:aspect-h-9 overflow-hidden z-0">
                                 <div>
-                                    <div class=" group group/cardGallerySlider nc-PostFeaturedMedia relative w-full h-full">
+                                    <div class=" group group/cardGallerySlider nc-PostFeaturedMedia cursor-pointer relative w-full h-full">
                                         <Carousel>
                                             <img src={topic2} sizes="(max-width: 1025px) 100vw, 300px" class=" w-full h-full" />
                                             <img src={topic7} sizes="(max-width: 1025px) 100vw, 300px" class=" w-full h-full" />
@@ -582,7 +590,7 @@ const Banner = () => {
                                     </div>
                                 </div>
                             </div>
-                            <div class="absolute top-3 inset-x-3 flex justify-between items-start space-x-4 z-10">
+                            <div class="absolute top-3 inset-x-3 flex justify-between items-start space-x-4  ">
                                 <div class="nc-CategoryBadgeList flex flex-wrap space-x-2" data-nc-id="CategoryBadgeList">
                                     <a class="transition-colors hover:text-white duration-300 nc-Badge  inline-flex px-2.5 py-1 rounded-full font-medium text-xs relative text-pink-800 bg-pink-100 hover:bg-pink-800" href="/archive/the-demo-archive-slug">Planner</a>
                                 </div>
@@ -594,27 +602,31 @@ const Banner = () => {
                                     </button>
                                 </div>
                             </div>
-                            <div class="space-y-2.5 mt-4">
-                                <div class="nc-PostCardMetaV2 inline-flex items-center flex-wrap text-neutral-800  leading-none text-xs">
-                                    <div class="relative flex items-center space-x-2">
-                                        <div>
-                                            <h2 class="block font-medium text-base">
-                                                <a class="line-clamp-1" href="/single-gallery/this-is-single-slug">People who inspired us in 2019 </a>
-                                            </h2>
-                                            <a class="flex mt-1.5 center" href="/author/the-demo-author-slug">
-                                                <span class="block text-burnt hover:text-neutral-500 font-semibold text-[20px]">1.2</span>
-                                                <span class="text-neutral-500  mx-[6px] font-medium">$</span>
-                                            </a>
+                            <div class="space-y-2 px-2.5 pt-3 pb-2.5">
+                                <div>
+                                    <h2 class="nc-ProductCard__title text-base font-semibold transition-colors">Round Buckle 1" Belt</h2>
+                                    <p class="text-sm text-slate-500 mt-1">Classic green</p>
+                                </div>
+                                <div class="flex justify-between items-end">
+                                    <div>
+                                        <div class="flex items-center border-2 border-green-500 rounded-lg py-1 px-2 md:py-1.5 md:px-2.5 text-sm font-medium">
+                                            <span class="text-green-500"> $68.00</span>
                                         </div>
+                                    </div>
+                                    <div class="flex items-center mb-0.5">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" class="w-5 h-5 pb-[1px] text-amber-400">
+                                            <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z" clip-rule="evenodd"></path>
+                                        </svg>
+                                        <span class="text-sm ml-1 text-slate-500">4.9 (85 reviews)</span>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="nc-Card10 relative flex flex-col h-full">
-                            <a class="absolute inset-0" href="/single-gallery/this-is-single-slug"></a>
+                            <a class="absolute inset-0" href="productDetail"></a>
                             <div class="block group rounded-3xl flex-shrink-0 relative w-full aspect-w-9 aspect-h-7 sm:aspect-h-9 overflow-hidden z-0">
                                 <div>
-                                    <div class=" group group/cardGallerySlider nc-PostFeaturedMedia relative w-full h-full">
+                                    <div class=" group group/cardGallerySlider nc-PostFeaturedMedia cursor-pointer relative w-full h-full">
                                         <Carousel>
                                             <img src={topic3} sizes="(max-width: 1025px) 100vw, 300px" class=" w-full h-full" />
                                             <img src={topic7} sizes="(max-width: 1025px) 100vw, 300px" class=" w-full h-full" />
@@ -625,7 +637,7 @@ const Banner = () => {
                                     </div>
                                 </div>
                             </div>
-                            <div class="absolute top-3 inset-x-3 flex justify-between items-start space-x-4 z-10">
+                            <div class="absolute top-3 inset-x-3 flex justify-between items-start space-x-4  ">
                                 <div class="nc-CategoryBadgeList flex flex-wrap space-x-2" data-nc-id="CategoryBadgeList">
                                     <a class="transition-colors hover:text-white duration-300 nc-Badge  inline-flex px-2.5 py-1 rounded-full font-medium text-xs relative text-blue-800 bg-blue-100 hover:bg-blue-800" href="/archive/the-demo-archive-slug">Cards</a>
                                 </div>
@@ -637,27 +649,31 @@ const Banner = () => {
                                     </button>
                                 </div>
                             </div>
-                            <div class="space-y-2.5 mt-4">
-                                <div class="nc-PostCardMetaV2 inline-flex items-center flex-wrap text-neutral-800  leading-none text-xs">
-                                    <div class="relative flex items-center space-x-2">
-                                        <div>
-                                            <h2 class="block font-medium text-base">
-                                                <a class="line-clamp-1" href="/single-gallery/this-is-single-slug">People who inspired us in 2019 </a>
-                                            </h2>
-                                            <a class="flex mt-1.5 center" href="/author/the-demo-author-slug">
-                                                <span class="block text-burnt hover:text-neutral-500 font-semibold text-[20px]">1.2</span>
-                                                <span class="text-neutral-500  mx-[6px] font-medium">$</span>
-                                            </a>
+                            <div class="space-y-2 px-2.5 pt-3 pb-2.5">
+                                <div>
+                                    <h2 class="nc-ProductCard__title text-base font-semibold transition-colors">Round Buckle 1" Belt</h2>
+                                    <p class="text-sm text-slate-500 mt-1">Classic green</p>
+                                </div>
+                                <div class="flex justify-between items-end">
+                                    <div>
+                                        <div class="flex items-center border-2 border-green-500 rounded-lg py-1 px-2 md:py-1.5 md:px-2.5 text-sm font-medium">
+                                            <span class="text-green-500"> $68.00</span>
                                         </div>
+                                    </div>
+                                    <div class="flex items-center mb-0.5">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" class="w-5 h-5 pb-[1px] text-amber-400">
+                                            <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z" clip-rule="evenodd"></path>
+                                        </svg>
+                                        <span class="text-sm ml-1 text-slate-500">4.9 (85 reviews)</span>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="nc-Card10 relative flex flex-col h-full">
-                            <a class="absolute inset-0" href="/single-gallery/this-is-single-slug"></a>
+                            <a class="absolute inset-0" href="productDetail"></a>
                             <div class="block group rounded-3xl flex-shrink-0 relative w-full aspect-w-9 aspect-h-7 sm:aspect-h-9 overflow-hidden z-0">
                                 <div>
-                                    <div class=" group group/cardGallerySlider nc-PostFeaturedMedia relative w-full h-full">
+                                    <div class=" group group/cardGallerySlider nc-PostFeaturedMedia cursor-pointer relative w-full h-full">
                                         <Carousel>
                                             <img src={topic9} sizes="(max-width: 1025px) 100vw, 300px" class=" w-full h-full" />
                                             <img src={topic7} sizes="(max-width: 1025px) 100vw, 300px" class=" w-full h-full" />
@@ -668,7 +684,7 @@ const Banner = () => {
                                     </div>
                                 </div>
                             </div>
-                            <div class="absolute top-3 inset-x-3 flex justify-between items-start space-x-4 z-10">
+                            <div class="absolute top-3 inset-x-3 flex justify-between items-start space-x-4  ">
                                 <div class="nc-CategoryBadgeList flex flex-wrap space-x-2" data-nc-id="CategoryBadgeList">
                                     <a class="transition-colors hover:text-white duration-300 nc-Badge  inline-flex px-2.5 py-1 rounded-full font-medium text-xs relative text-red-800 bg-red-100 hover:bg-red-800" href="/archive/the-demo-archive-slug">sheet</a>
                                 </div>
@@ -681,18 +697,22 @@ const Banner = () => {
                                     </button>
                                 </div>
                             </div>
-                            <div class="space-y-2.5 mt-4">
-                                <div class="nc-PostCardMetaV2 inline-flex items-center flex-wrap text-neutral-800  leading-none text-xs">
-                                    <div class="relative flex items-center space-x-2">
-                                        <div>
-                                            <h2 class="block font-medium text-base">
-                                                <a class="line-clamp-1" href="">How architects visualize design for world’s biggest airport</a>
-                                            </h2>
-                                            <a class="flex mt-1.5 center" href="/author/the-demo-author-slug">
-                                                <span class="block text-burnt hover:text-neutral-500 font-semibold text-[20px]">1.2</span>
-                                                <span class="text-neutral-500  mx-[6px] font-medium">$</span>
-                                            </a>
+                            <div class="space-y-2 px-2.5 pt-3 pb-2.5">
+                                <div>
+                                    <h2 class="nc-ProductCard__title text-base font-semibold transition-colors">Round Buckle 1" Belt</h2>
+                                    <p class="text-sm text-slate-500 mt-1">Classic green</p>
+                                </div>
+                                <div class="flex justify-between items-end">
+                                    <div>
+                                        <div class="flex items-center border-2 border-green-500 rounded-lg py-1 px-2 md:py-1.5 md:px-2.5 text-sm font-medium">
+                                            <span class="text-green-500"> $68.00</span>
                                         </div>
+                                    </div>
+                                    <div class="flex items-center mb-0.5">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" class="w-5 h-5 pb-[1px] text-amber-400">
+                                            <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z" clip-rule="evenodd"></path>
+                                        </svg>
+                                        <span class="text-sm ml-1 text-slate-500">4.9 (85 reviews)</span>
                                     </div>
                                 </div>
                             </div>
@@ -731,16 +751,16 @@ const Banner = () => {
                     <Slider {...settings}>
                         <div class="relative inline-block px-2 xl:px-4 whitespace-normal w-1/4 ">
                             <div class="nc-Card11 relative flex flex-col group rounded-3xl overflow-hidden bg-white ">
-                                <div class="block flex-shrink-0 relative w-full h-full rounded-3xl overflow-hidden z-10 aspect-w-4 aspect-h-3">
+                                <div class="block flex-shrink-0 relative w-full h-full rounded-3xl overflow-hidden   aspect-w-4 aspect-h-3">
                                     <div>
                                         <div class="nc-PostFeaturedMedia relative w-full ">
                                             <img src={topic2} sizes="(max-width: 1025px) 100vw, 300px" class=" w-full h-full" />
-                                            <a class="block absolute inset-0 bg-black/20 transition-opacity opacity-0 group-hover:opacity-100" href="/single/this-is-single-slug"></a>
+                                            <a class="block absolute inset-0 bg-black/20 transition-opacity opacity-0 group-hover:opacity-100" href="/single "></a>
                                         </div>
                                     </div>
                                 </div>
-                                <a class="absolute inset-0" href="/single/this-is-single-slug"></a>
-                                <span class="absolute top-3 inset-x-3 z-10">
+                                <a class="absolute inset-0" href="/single "></a>
+                                <span class="absolute top-3 inset-x-3  ">
                                     <div class="nc-CategoryBadgeList flex flex-wrap space-x-2" data-nc-id="CategoryBadgeList">
                                         <a class="transition-colors hover:text-white duration-300 nc-Badge  inline-flex px-2.5 py-1 rounded-full font-medium text-xs relative text-yellow-800 bg-yellow-100 hover:bg-yellow-800" href="/archive/the-demo-archive-slug">Industrial</a>
 
@@ -784,16 +804,16 @@ const Banner = () => {
                         </div>
                         <div class="relative inline-block px-2 xl:px-4 whitespace-normal w-1/4 ">
                             <div class="nc-Card11 relative flex flex-col group rounded-3xl overflow-hidden bg-white ">
-                                <div class="block flex-shrink-0 relative w-full h-full rounded-3xl overflow-hidden z-10 aspect-w-4 aspect-h-3">
+                                <div class="block flex-shrink-0 relative w-full h-full rounded-3xl overflow-hidden   aspect-w-4 aspect-h-3">
                                     <div>
                                         <div class="nc-PostFeaturedMedia relative w-full ">
                                             <img src={topic7} sizes="(max-width: 1025px) 100vw, 300px" class=" w-full h-full" />
-                                            <a class="block absolute inset-0 bg-black/20 transition-opacity opacity-0 group-hover:opacity-100" href="/single/this-is-single-slug"></a>
+                                            <a class="block absolute inset-0 bg-black/20 transition-opacity opacity-0 group-hover:opacity-100" href="/single "></a>
                                         </div>
                                     </div>
                                 </div>
-                                <a class="absolute inset-0" href="/single/this-is-single-slug"></a>
-                                <span class="absolute top-3 inset-x-3 z-10">
+                                <a class="absolute inset-0" href="/single "></a>
+                                <span class="absolute top-3 inset-x-3  ">
                                     <div class="nc-CategoryBadgeList flex flex-wrap space-x-2" data-nc-id="CategoryBadgeList">
                                         <a class="transition-colors hover:text-white duration-300 nc-Badge  inline-flex px-2.5 py-1 rounded-full font-medium text-xs relative text-red-800 bg-red-100 hover:bg-red-800" href="/archive/the-demo-archive-slug">Electronics</a>
 
@@ -837,16 +857,16 @@ const Banner = () => {
                         </div>
                         <div class="relative inline-block px-2 xl:px-4 whitespace-normal w-1/4 ">
                             <div class="nc-Card11 relative flex flex-col group rounded-3xl overflow-hidden bg-white ">
-                                <div class="block flex-shrink-0 relative w-full h-full rounded-3xl overflow-hidden z-10 aspect-w-4 aspect-h-3">
+                                <div class="block flex-shrink-0 relative w-full h-full rounded-3xl overflow-hidden   aspect-w-4 aspect-h-3">
                                     <div>
                                         <div class="nc-PostFeaturedMedia relative w-full ">
                                             <img src={topic1} sizes="(max-width: 1025px) 100vw, 300px" class=" w-full h-full" />
-                                            <a class="block absolute inset-0 bg-black/20 transition-opacity opacity-0 group-hover:opacity-100" href="/single/this-is-single-slug"></a>
+                                            <a class="block absolute inset-0 bg-black/20 transition-opacity opacity-0 group-hover:opacity-100" href="/single "></a>
                                         </div>
                                     </div>
                                 </div>
-                                <a class="absolute inset-0" href="/single/this-is-single-slug"></a>
-                                <span class="absolute top-3 inset-x-3 z-10">
+                                <a class="absolute inset-0" href="/single "></a>
+                                <span class="absolute top-3 inset-x-3  ">
                                     <div class="nc-CategoryBadgeList flex flex-wrap space-x-2" data-nc-id="CategoryBadgeList">
                                         <a class="transition-colors hover:text-white duration-300 nc-Badge  inline-flex px-2.5 py-1 rounded-full font-medium text-xs relative text-blue-800 bg-blue-100 hover:bg-blue-800" href="/archive/the-demo-archive-slug">Cards</a>
                                     </div>
@@ -889,16 +909,16 @@ const Banner = () => {
                         </div>
                         <div class="relative inline-block px-2 xl:px-4 whitespace-normal w-1/4 ">
                             <div class="nc-Card11 relative flex flex-col group rounded-3xl overflow-hidden bg-white ">
-                                <div class="block flex-shrink-0 relative w-full h-full rounded-3xl overflow-hidden z-10 aspect-w-4 aspect-h-3">
+                                <div class="block flex-shrink-0 relative w-full h-full rounded-3xl overflow-hidden   aspect-w-4 aspect-h-3">
                                     <div>
                                         <div class="nc-PostFeaturedMedia relative w-full ">
                                             <img src={topic6} sizes="(max-width: 1025px) 100vw, 300px" class=" w-full h-full" />
-                                            <a class="block absolute inset-0 bg-black/20 transition-opacity opacity-0 group-hover:opacity-100" href="/single/this-is-single-slug"></a>
+                                            <a class="block absolute inset-0 bg-black/20 transition-opacity opacity-0 group-hover:opacity-100" href="/single "></a>
                                         </div>
                                     </div>
                                 </div>
-                                <a class="absolute inset-0" href="/single/this-is-single-slug"></a>
-                                <span class="absolute top-3 inset-x-3 z-10">
+                                <a class="absolute inset-0" href="/single "></a>
+                                <span class="absolute top-3 inset-x-3  ">
                                     <div class="nc-CategoryBadgeList flex flex-wrap space-x-2" data-nc-id="CategoryBadgeList">
                                         <a class="transition-colors hover:text-white duration-300 nc-Badge  inline-flex px-2.5 py-1 rounded-full font-medium text-xs relative text-pink-800 bg-pink-100 hover:bg-pink-800" href="/archive/the-demo-archive-slug">Planner</a>
                                     </div>
@@ -941,16 +961,16 @@ const Banner = () => {
                         </div>
                         <div class="relative inline-block px-2 xl:px-4 whitespace-normal w-1/4 ">
                             <div class="nc-Card11 relative flex flex-col group rounded-3xl overflow-hidden bg-white ">
-                                <div class="block flex-shrink-0 relative w-full h-full rounded-3xl overflow-hidden z-10 aspect-w-4 aspect-h-3">
+                                <div class="block flex-shrink-0 relative w-full h-full rounded-3xl overflow-hidden   aspect-w-4 aspect-h-3">
                                     <div>
                                         <div class="nc-PostFeaturedMedia relative w-full ">
                                             <img src={topic5} sizes="(max-width: 1025px) 100vw, 300px" class=" w-full h-full" />
-                                            <a class="block absolute inset-0 bg-black/20 transition-opacity opacity-0 group-hover:opacity-100" href="/single/this-is-single-slug"></a>
+                                            <a class="block absolute inset-0 bg-black/20 transition-opacity opacity-0 group-hover:opacity-100" href="/single "></a>
                                         </div>
                                     </div>
                                 </div>
-                                <a class="absolute inset-0" href="/single/this-is-single-slug"></a>
-                                <span class="absolute top-3 inset-x-3 z-10">
+                                <a class="absolute inset-0" href="/single "></a>
+                                <span class="absolute top-3 inset-x-3  ">
                                     <div class="nc-CategoryBadgeList flex flex-wrap space-x-2" data-nc-id="CategoryBadgeList">
                                         <a class="transition-colors hover:text-white duration-300 nc-Badge  inline-flex px-2.5 py-1 rounded-full font-medium text-xs relative text-red-800 bg-red-100 hover:bg-red-800" href="/archive/the-demo-archive-slug">Electronics</a>
                                     </div>
@@ -1023,7 +1043,7 @@ const Banner = () => {
                     </form>
                 </div>
                 <div class="flex-grow">
-                    <img sizes="(max-width: 768px) 100vw, 50vw" src={getfree}  alt="subsc" />
+                    <img sizes="(max-width: 768px) 100vw, 50vw" src={getfree} alt="subsc" />
                 </div>
             </div>
 

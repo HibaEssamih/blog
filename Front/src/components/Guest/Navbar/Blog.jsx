@@ -1,15 +1,31 @@
-import { Fragment } from 'react'
+import { Fragment, useState } from 'react'
 import { Menu, Transition } from '@headlessui/react'
+import { Link, useLocation } from "react-router-dom";
+
 
 function classNames(...classes) {
     return classes.filter(Boolean).join(' ')
 }
 
 export default function Blog() {
+    const location = useLocation();
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+    const handleMouseEnter = () => {
+        setIsMenuOpen(true);
+    };
+
+    const handleMouseLeave = () => {
+        setIsMenuOpen(false);
+    };
+
     return (
-        <Menu as="div" className="relative inline-block text-left">
+        <Menu as="div" className="relative inline-block text-left" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
             <div>
-                <Menu.Button className="inline-flex w-full justify-center gap-x-1.5 hover:text-purple px-3 py-4 text-15px font-normal space-links items-center">
+                <Menu.Button className={classNames(
+                    location.pathname === `/categoryPage` ? 'text-burnt' : 'hover:text-burnt',
+                    'inline-flex w-full justify-center gap-x-1.5  px-3 py-4 text-15px font-normal items-center'
+                )}>
                     Blogs
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-4 h-4">
                         <path strokeLinecap="round" strokeLinejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
@@ -19,6 +35,7 @@ export default function Blog() {
 
             <Transition
                 as={Fragment}
+                show={isMenuOpen}
                 enter="transition ease-out duration-100"
                 enterFrom="transform opacity-0 scale-95"
                 enterTo="transform opacity-100 scale-100"
@@ -26,12 +43,12 @@ export default function Blog() {
                 leaveFrom="transform opacity-100 scale-100"
                 leaveTo="transform opacity-0 scale-95"
             >
-                <Menu.Items className="absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
-                    <div className="py-1">
+                <Menu.Items className="absolute right-0 z-[1000] mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+                    <div className="py-4">
                         <Menu.Item>
                             {({ active }) => (
                                 <a
-                                    href="#"
+                                    href="categoryPage"
                                     className={classNames(
                                         active ? 'bg-gray-50 text-gray-800 mx-2 rounded-md' : 'text-gray-800',
                                         'block px-4 mx-2 py-2 text-sm'
@@ -44,7 +61,7 @@ export default function Blog() {
                         <Menu.Item>
                             {({ active }) => (
                                 <a
-                                    href="#"
+                                    href="categoryPage"
                                     className={classNames(
                                         active ? 'bg-gray-50 text-gray-800 mx-2 rounded-md' : 'text-gray-800',
                                         'block px-4 mx-2 py-2 text-sm'
@@ -57,7 +74,7 @@ export default function Blog() {
                         <Menu.Item>
                             {({ active }) => (
                                 <a
-                                    href="#"
+                                    href="categoryPage"
                                     className={classNames(
                                         active ? 'bg-gray-50 text-gray-800 mx-2 rounded-md' : 'text-gray-800',
                                         'block px-4 mx-2 py-2 text-sm'
@@ -70,7 +87,7 @@ export default function Blog() {
                         <Menu.Item>
                             {({ active }) => (
                                 <a
-                                    href="#"
+                                    href="categoryPage"
                                     className={classNames(
                                         active ? 'bg-gray-50 text-gray-800 mx-2 rounded-md' : 'text-gray-800',
                                         'block px-4 mx-2 py-2 text-sm'
@@ -80,7 +97,7 @@ export default function Blog() {
                                 </a>
                             )}
                         </Menu.Item>
-                       
+
                     </div>
                 </Menu.Items>
             </Transition>

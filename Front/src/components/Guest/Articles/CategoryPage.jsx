@@ -140,11 +140,11 @@ export const CategoryPage = () => {
                                 <div>
                                     <div class="nc-PostFeaturedMedia relative w-full h-full">
                                         <img src="https://images.unsplash.com/photo-1581610489881-f316ffcf0424?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1000&amp;q=80" sizes="(max-width: 600px) 480px, 800px" class="object-cover inset-0 w-full h-full" alt="featured" />
-                                        <a class="block absolute inset-0 bg-black/20 transition-opacity opacity-0 group-hover:opacity-100" href="/single/this-is-single-slug"></a>
+                                        <a class="block absolute inset-0 bg-black/20 transition-opacity opacity-0 group-hover:opacity-100" href="single"></a>
                                     </div>
                                 </div>
                             </div>
-                            <a class="absolute inset-0" href="/single/this-is-single-slug"></a>
+                            <a class="absolute inset-0" href="single"></a>
                             <span class="absolute top-3 inset-x-3 ">
                                 <div class="nc-CategoryBadgeList flex flex-wrap space-x-2" data-nc-id="CategoryBadgeList">
                                     <a class="transition-colors hover:text-white duration-300 nc-Badge  inline-flex px-2.5 py-1 rounded-full font-medium text-xs relative text-pink-800 bg-pink-100 hover:bg-pink-800" href="/archive/the-demo-archive-slug">Automotive</a>
@@ -190,11 +190,11 @@ export const CategoryPage = () => {
                                 <div>
                                     <div class="nc-PostFeaturedMedia relative w-full h-full">
                                         <img src="https://images.unsplash.com/photo-1581610489881-f316ffcf0424?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1000&amp;q=80" sizes="(max-width: 600px) 480px, 800px" class="object-cover inset-0 w-full h-full" alt="featured" />
-                                        <a class="block absolute inset-0 bg-black/20 transition-opacity opacity-0 group-hover:opacity-100" href="/single/this-is-single-slug"></a>
+                                        <a class="block absolute inset-0 bg-black/20 transition-opacity opacity-0 group-hover:opacity-100" href="single"></a>
                                     </div>
                                 </div>
                             </div>
-                            <a class="absolute inset-0" href="/single/this-is-single-slug"></a>
+                            <a class="absolute inset-0" href="single"></a>
                             <span class="absolute top-3 inset-x-3 ">
                                 <div class="nc-CategoryBadgeList flex flex-wrap space-x-2" data-nc-id="CategoryBadgeList">
                                     <a class="transition-colors hover:text-white duration-300 nc-Badge  inline-flex px-2.5 py-1 rounded-full font-medium text-xs relative text-pink-800 bg-pink-100 hover:bg-pink-800" href="/archive/the-demo-archive-slug">Automotive</a>
@@ -240,11 +240,11 @@ export const CategoryPage = () => {
                                 <div>
                                     <div class="nc-PostFeaturedMedia relative w-full h-full">
                                         <img src="https://images.unsplash.com/photo-1581610489881-f316ffcf0424?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1000&amp;q=80" sizes="(max-width: 600px) 480px, 800px" class="object-cover inset-0 w-full h-full" alt="featured" />
-                                        <a class="block absolute inset-0 bg-black/20 transition-opacity opacity-0 group-hover:opacity-100" href="/single/this-is-single-slug"></a>
+                                        <a class="block absolute inset-0 bg-black/20 transition-opacity opacity-0 group-hover:opacity-100" href="single"></a>
                                     </div>
                                 </div>
                             </div>
-                            <a class="absolute inset-0" href="/single/this-is-single-slug"></a>
+                            <a class="absolute inset-0" href="single"></a>
                             <span class="absolute top-3 inset-x-3 ">
                                 <div class="nc-CategoryBadgeList flex flex-wrap space-x-2" data-nc-id="CategoryBadgeList">
                                     <a class="transition-colors hover:text-white duration-300 nc-Badge  inline-flex px-2.5 py-1 rounded-full font-medium text-xs relative text-pink-800 bg-pink-100 hover:bg-pink-800" href="/archive/the-demo-archive-slug">Automotive</a>
@@ -290,11 +290,11 @@ export const CategoryPage = () => {
                                 <div>
                                     <div class="nc-PostFeaturedMedia relative w-full h-full">
                                         <img src="https://images.unsplash.com/photo-1581610489881-f316ffcf0424?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1000&amp;q=80" sizes="(max-width: 600px) 480px, 800px" class="object-cover inset-0 w-full h-full" alt="featured" />
-                                        <a class="block absolute inset-0 bg-black/20 transition-opacity opacity-0 group-hover:opacity-100" href="/single/this-is-single-slug"></a>
+                                        <a class="block absolute inset-0 bg-black/20 transition-opacity opacity-0 group-hover:opacity-100" href="single"></a>
                                     </div>
                                 </div>
                             </div>
-                            <a class="absolute inset-0" href="/single/this-is-single-slug"></a>
+                            <a class="absolute inset-0" href="single"></a>
                             <span class="absolute top-3 inset-x-3 ">
                                 <div class="nc-CategoryBadgeList flex flex-wrap space-x-2" data-nc-id="CategoryBadgeList">
                                     <a class="transition-colors hover:text-white duration-300 nc-Badge  inline-flex px-2.5 py-1 rounded-full font-medium text-xs relative text-pink-800 bg-pink-100 hover:bg-pink-800" href="/archive/the-demo-archive-slug">Automotive</a>
@@ -340,11 +340,11 @@ export const CategoryPage = () => {
                                 <div>
                                     <div class="nc-PostFeaturedMedia relative w-full h-full">
                                         <img src="https://images.unsplash.com/photo-1581610489881-f316ffcf0424?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1000&amp;q=80" sizes="(max-width: 600px) 480px, 800px" class="object-cover inset-0 w-full h-full" alt="featured" />
-                                        <a class="block absolute inset-0 bg-black/20 transition-opacity opacity-0 group-hover:opacity-100" href="/single/this-is-single-slug"></a>
+                                        <a class="block absolute inset-0 bg-black/20 transition-opacity opacity-0 group-hover:opacity-100" href="single"></a>
                                     </div>
                                 </div>
                             </div>
-                            <a class="absolute inset-0" href="/single/this-is-single-slug"></a>
+                            <a class="absolute inset-0" href="single"></a>
                             <span class="absolute top-3 inset-x-3 ">
                                 <div class="nc-CategoryBadgeList flex flex-wrap space-x-2" data-nc-id="CategoryBadgeList">
                                     <a class="transition-colors hover:text-white duration-300 nc-Badge  inline-flex px-2.5 py-1 rounded-full font-medium text-xs relative text-pink-800 bg-pink-100 hover:bg-pink-800" href="/archive/the-demo-archive-slug">Automotive</a>
@@ -390,11 +390,11 @@ export const CategoryPage = () => {
                                 <div>
                                     <div class="nc-PostFeaturedMedia relative w-full h-full">
                                         <img src="https://images.unsplash.com/photo-1581610489881-f316ffcf0424?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1000&amp;q=80" sizes="(max-width: 600px) 480px, 800px" class="object-cover inset-0 w-full h-full" alt="featured" />
-                                        <a class="block absolute inset-0 bg-black/20 transition-opacity opacity-0 group-hover:opacity-100" href="/single/this-is-single-slug"></a>
+                                        <a class="block absolute inset-0 bg-black/20 transition-opacity opacity-0 group-hover:opacity-100" href="single"></a>
                                     </div>
                                 </div>
                             </div>
-                            <a class="absolute inset-0" href="/single/this-is-single-slug"></a>
+                            <a class="absolute inset-0" href="single"></a>
                             <span class="absolute top-3 inset-x-3 ">
                                 <div class="nc-CategoryBadgeList flex flex-wrap space-x-2" data-nc-id="CategoryBadgeList">
                                     <a class="transition-colors hover:text-white duration-300 nc-Badge  inline-flex px-2.5 py-1 rounded-full font-medium text-xs relative text-pink-800 bg-pink-100 hover:bg-pink-800" href="/archive/the-demo-archive-slug">Automotive</a>
@@ -440,11 +440,11 @@ export const CategoryPage = () => {
                                 <div>
                                     <div class="nc-PostFeaturedMedia relative w-full h-full">
                                         <img src="https://images.unsplash.com/photo-1581610489881-f316ffcf0424?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1000&amp;q=80" sizes="(max-width: 600px) 480px, 800px" class="object-cover inset-0 w-full h-full" alt="featured" />
-                                        <a class="block absolute inset-0 bg-black/20 transition-opacity opacity-0 group-hover:opacity-100" href="/single/this-is-single-slug"></a>
+                                        <a class="block absolute inset-0 bg-black/20 transition-opacity opacity-0 group-hover:opacity-100" href="single"></a>
                                     </div>
                                 </div>
                             </div>
-                            <a class="absolute inset-0" href="/single/this-is-single-slug"></a>
+                            <a class="absolute inset-0" href="single"></a>
                             <span class="absolute top-3 inset-x-3 ">
                                 <div class="nc-CategoryBadgeList flex flex-wrap space-x-2" data-nc-id="CategoryBadgeList">
                                     <a class="transition-colors hover:text-white duration-300 nc-Badge  inline-flex px-2.5 py-1 rounded-full font-medium text-xs relative text-pink-800 bg-pink-100 hover:bg-pink-800" href="/archive/the-demo-archive-slug">Automotive</a>

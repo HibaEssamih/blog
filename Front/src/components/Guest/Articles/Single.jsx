@@ -200,7 +200,7 @@ export const Single = () => {
                             <div class="mx-2 md:mx-0">
                                 <h3 class="text-xl font-semibold text-neutral-800">Responses (10)</h3>
                                 <form action="#" class="nc-SingleCommentForm mt-5">
-                                    <textarea class=" border p-3 block w-full text-sm rounded-xl border-neutral-300 focus:border-primary-300 focus:ring focus:ring-primary-200 focus:ring-opacity-50   " rows="4" placeholder="Add to discussion" required=""></textarea>
+                                    <textarea class=" border p-3 block w-full text-sm rounded-xl border-neutral-300 focus:border-blue-300 focus:ring focus:ring-blue-200 focus:ring-opacity-50   " rows="4" placeholder="Add to discussion" required=""></textarea>
                                     <div class="mt-4 space-x-3">
                                         <button class="nc-Button flex-shrink-0 relative h-auto inline-flex items-center justify-center rounded-full transition-colors border-transparent bg-burnt hover:bg-burntmedium text-neutral-50 text-sm sm:text-base font-medium py-3 px-4 sm:py-3.5 sm:px-6" type="submit">Submit</button>
                                         <button class="nc-Button flex-shrink-0 relative h-auto inline-flex items-center justify-center rounded-full transition-colors border border-burnt bg-white text-neutral-600  text-sm sm:text-base font-medium py-3 px-4 sm:py-3.5 sm:px-6" type="button">Cancel</button>

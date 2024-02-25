@@ -1,5 +1,7 @@
 import React from 'react'
 import { facebook, google } from '../../assets'
+import { Link } from "react-router-dom";
+
 
 const Login = () => {
     return (
@@ -22,24 +24,29 @@ const Login = () => {
                             </a>
                         </div>
                         <div class="relative text-center">
-                            <span class="relative z-10 inline-block px-4 font-medium text-sm bg-white ">OR</span>
-                            <div class="absolute left-0 w-full top-1/2 transform -translate-y-1/2 border border-neutral-100 "></div>
+                            <div class="absolute left-0 w-full  top-1/2 transform -translate-y-1/2 border border-neutral-100 "></div>
+                            <span class="relative z-1 inline-block px-4 font-medium text-sm bg-white ">OR</span>
+
                         </div>
                         <form class="grid grid-cols-1 gap-6" action="#" method="post">
                             <label class="block">
                                 <span class="text-neutral-800 ">Email address</span>
-                                <input type="email" class="block w-full border border-neutral-200 focus:border-primary-300 focus:ring focus:ring-primary-200/50 bg-white  rounded-full text-sm font-normal h-11 px-4 py-3 mt-1" placeholder="example@example.com" />
+                                <input type="email" class="block w-full border border-neutral-200 focus:border-blue-300 focus:ring focus:ring-blue-200/50 bg-white  rounded-full text-sm font-normal h-11 px-4 py-3 mt-1" placeholder="example@example.com" />
                             </label>
                             <label class="block">
                                 <span class="flex justify-between items-center text-neutral-800 ">Password
-                                    <a class="nc-NcLink text-blue-700 hover:text-blue-800  text-sm underline" href="/forgot-pass">Forgot password?</a>
+                                    <Link to="/forgetPassword">
+                                        <a class="nc-NcLink text-blue-700 hover:text-blue-800  text-sm underline" href="/forgot-pass">Forgot password?</a>
+                                    </Link>
                                 </span>
-                                <input type="Password" class="block w-full border border-neutral-200 focus:border-primary-300 focus:ring focus:ring-primary-200/50 bg-white  rounded-full text-sm font-normal h-11 px-4 py-3 mt-1" />
+                                <input type="Password" class="block w-full border border-neutral-200 focus:border-blue-300 focus:ring focus:ring-blue-200/50 bg-white  rounded-full text-sm font-normal h-11 px-4 py-3 mt-1" />
                             </label>
                             <button class="nc-Button flex-shrink-0 relative h-auto inline-flex items-center justify-center rounded-full transition-colors border-transparent bg-burnt hover:bg-burntmedium text-neutral-100 text-sm sm:text-base font-medium py-3 px-4 sm:py-3.5 sm:px-6  " type="submit">Continue</button>
                         </form>
                         <span class="block text-center text-neutral-700 ">New user?
-                            <a class="nc-NcLink text-burnt hover:text-amber-900 font-medium" href="/signup"> Create an account</a>
+                            <Link to="/signup">
+                                <a class="nc-NcLink text-burnt hover:text-amber-900 font-medium" href="/signup"> Create an account</a>
+                            </Link>
                         </span>
                     </div>
                 </div>

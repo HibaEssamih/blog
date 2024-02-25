@@ -1,13 +1,15 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import Contactus from './Contactus';
+import { Link, useLocation } from "react-router-dom";
+import { ChevronUpIcon, CheckIcon, ChevronUpDownIcon } from '@heroicons/react/20/solid'
+import { Disclosure } from '@headlessui/react'
+
 
 const navigation = [
-  { name: 'Home', href: '', current: true },
-  { name: 'Blogs', href: '', current: false },
-  { name: 'Tools', href: '', current: false },
-  { name: 'Shop', href: '', current: false },
-  { name: 'Join', href: '', current: false },
+  { name: 'Home', href: '', current: false },
+  { name: 'Tools', href: 'tools', current: false },
+  { name: 'Shop', href: 'allProducts', current: false },
+  { name: 'Blog', href: 'categoryPage', current: false },
+  { name: 'Contact Us', href: 'contactUs', current: false },
 ];
 
 function classNames(...classes) {
@@ -25,7 +27,7 @@ const Data = () => {
                 key={item.name}
                 to={`/${item.href}`}
                 className={classNames(
-                  item.current ? ' text-purple' : 'text-black  hover:text-purple',
+                  location.pathname === `/${item.href}` ? ' text-burnt' : 'text-black  hover:text-burnt',
                   'block  py-2 rounded-md text-base font-normal'
                 )}
                 aria-current={item.current ? 'page' : undefined}
@@ -33,6 +35,7 @@ const Data = () => {
                 {item.name}
               </Link>
             ))}
+            
 
             {/* {navigation.map((item) => (
               <li
@@ -47,13 +50,12 @@ const Data = () => {
 
 
             ))} */}
-            <Contactus />
             <div className="mt-8"></div>
             {/* <button className="bg-white w-full hover:bg-burnt hover:text-white text-black border border-burnt font-medium py-2 px-4 rounded">
               Sign In
             </button> */}
             <button className="bg-white w-full hover:bg-burnt hover:text-white text-burnt border border-burnt font-medium py-2 px-4 rounded">
-            Sign In
+              Sign In
             </button>
           </div>
         </div>
