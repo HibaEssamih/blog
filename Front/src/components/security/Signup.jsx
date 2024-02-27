@@ -24,8 +24,8 @@ const Signup = () => {
                             </a>
                         </div>
                         <div class="relative text-center">
-                            <span class="relative z-10 inline-block px-4 font-medium text-sm bg-white ">OR</span>
                             <div class="absolute left-0 w-full top-1/2 transform -translate-y-1/2 border border-neutral-100 "></div>
+                            <span class="relative inline-block px-4 font-medium text-sm bg-white ">OR</span>
                         </div>
                         <form class="grid grid-cols-1 gap-6" action="#" method="post">
                             <label class="block">

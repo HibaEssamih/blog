@@ -1,7 +1,7 @@
-import React, { Fragment } from 'react'
+import React, { Fragment, useEffect, useRef, useState } from 'react'
 import { shopbann, getfree, banner1, Hero1, topic1, topic2, topic3, topic4, topic5, topic6, topic7, topic8, topic9, topic10, topic11 } from '../../../assets'
 import Carousel from '../Carousel';
-import { Popover, Transition } from '@headlessui/react'
+import { Menu, Transition } from '@headlessui/react'
 
 export const Single = () => {
     return (
@@ -55,78 +55,167 @@ export const Single = () => {
                                                     <path stroke-linecap="round" stroke-linejoin="round" d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0111.186 0z"></path>
                                                 </svg>
                                             </button>
-                                            <div class="relative inline-block text-left" data-headlessui-state="">
-                                                <button class="flex-shrink-0 flex items-center justify-center focus:outline-none h-9 w-9 bg-neutral-100 hover:bg-neutral-200 text-neutral-700 rounded-full" title="More" id="headlessui-menu-button-:rel:" type="button" aria-haspopup="menu" aria-expanded="false" data-headlessui-state="">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"></path>
-                                                    </svg>
-                                                </button>
-                                            </div>
-                                            <div>
-                                                <Popover class="relative  text-left" data-headlessui-state="">
-                                                    <Popover.Button class="text-neutral-500 flex items-center justify-center rounded-full h-9 w-9 bg-neutral-100 hover:bg-neutral-200 focus:outline-none" title="More" id="headlessui-menu-button-:rem:" type="button" aria-haspopup="menu" aria-expanded="false" data-headlessui-state="">
-                                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" data-slot="icon" class="h-5 w-5">
-                                                            <path fill-rule="evenodd" d="M4.5 12a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0Zm6 0a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0Zm6 0a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0Z" clip-rule="evenodd"></path>
+
+                                            <Menu as="div" className="relative inline-block text-left">
+                                                <div>
+                                                    <Menu.Button class="flex-shrink-0 flex items-center justify-center focus:outline-none h-9 w-9 bg-neutral-100 hover:bg-neutral-200 text-neutral-700 rounded-full" title="More" id="headlessui-menu-button-:rel:" type="button" aria-haspopup="menu" aria-expanded="false" data-headlessui-state="">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"></path>
                                                         </svg>
-                                                    </Popover.Button>
+                                                    </Menu.Button>
+                                                </div>
+                                                <Transition
+                                                    as={Fragment}
+                                                    enter="transition ease-out duration-100"
+                                                    enterFrom="transform opacity-0 scale-95"
+                                                    enterTo="transform opacity-100 scale-100"
+                                                    leave="transition ease-in duration-75"
+                                                    leaveFrom="transform opacity-100 scale-100"
+                                                    leaveTo="transform opacity-0 scale-95"
+                                                >
+
+                                                    <Menu.Items className="absolute right-0 mt-2 w-56  origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black/5 focus:outline-none">
+                                                        <div className="px-1 py-2 ">
+                                                            <Menu.Item>
+                                                                {({ active }) => (
+                                                                    <button
+                                                                        className={`${active ? 'bg-neutral-100 text-neutral-900' : 'text-gray-900'
+                                                                            } flex items-center rounded-xl text-sm w-full px-3 py-2 truncate focus:outline-none`}
+                                                                    >
+                                                                        <div>
+                                                                            <svg class="w-4 h-4" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                                <g clip-path="url(#clip0_17_61)">
+                                                                                    <path d="M48 24C48 10.7452 37.2548 0 24 0C10.7452 0 0 10.7452 0 24C0 35.9789 8.77641 45.908 20.25 47.7084V30.9375H14.1562V24H20.25V18.7125C20.25 12.6975 23.8331 9.375 29.3152 9.375C31.9402 9.375 34.6875 9.84375 34.6875 9.84375V15.75H31.6613C28.68 15.75 27.75 17.6002 27.75 19.5V24H34.4062L33.3422 30.9375H27.75V47.7084C39.2236 45.908 48 35.9789 48 24Z" fill="#3B3B3B"></path>
+                                                                                </g>
+                                                                            </svg>
+                                                                        </div>
+                                                                        <span class="ml-3">Facebook</span>
+                                                                    </button>
+
+                                                                )}
+                                                            </Menu.Item>
+
+                                                            <Menu.Item>
+                                                                {({ active }) => (
+                                                                    <button
+                                                                        className={`${active ? 'bg-neutral-100 text-neutral-900' : 'text-gray-900'
+                                                                            } flex items-center rounded-xl text-sm w-full px-3 py-2 truncate focus:outline-none`}
+                                                                    >
+                                                                        <div>
+                                                                            <svg class="w-4 h-4" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                                <g clip-path="url(#clip0_17_68)">
+                                                                                    <path d="M44.4469 0H3.54375C1.58437 0 0 1.54688 0 3.45938V44.5312C0 46.4437 1.58437 48 3.54375 48H44.4469C46.4062 48 48 46.4438 48 44.5406V3.45938C48 1.54688 46.4062 0 44.4469 0ZM14.2406 40.9031H7.11563V17.9906H14.2406V40.9031ZM10.6781 14.8688C8.39062 14.8688 6.54375 13.0219 6.54375 10.7437C6.54375 8.46562 8.39062 6.61875 10.6781 6.61875C12.9563 6.61875 14.8031 8.46562 14.8031 10.7437C14.8031 13.0125 12.9563 14.8688 10.6781 14.8688ZM40.9031 40.9031H33.7875V29.7656C33.7875 27.1125 33.7406 23.6906 30.0844 23.6906C26.3812 23.6906 25.8187 26.5875 25.8187 29.5781V40.9031H18.7125V17.9906H25.5375V21.1219H25.6312C26.5781 19.3219 28.9031 17.4188 32.3625 17.4188C39.5719 17.4188 40.9031 22.1625 40.9031 28.3313V40.9031Z" fill="#3B3B3B"></path>
+                                                                                </g>
+                                                                            </svg>
+                                                                        </div>
+                                                                        <span class="ml-3">Linkedin</span>
+                                                                    </button>
+
+                                                                )}
+                                                            </Menu.Item>
+                                                            <Menu.Item>
+                                                                {({ active }) => (
+                                                                    <button
+                                                                        className={`${active ? 'bg-neutral-100 text-neutral-900' : 'text-gray-900'
+                                                                            } flex items-center rounded-xl w-full text-sm px-3 py-2 truncate focus:outline-none`}
+                                                                    >
+                                                                        <div>
+                                                                            <svg class="w-4 h-4" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                                <g clip-path="url(#clip0_17_63)">
+                                                                                    <path d="M24 4.32187C30.4125 4.32187 31.1719 4.35 33.6938 4.4625C36.0375 4.56562 37.3031 4.95938 38.1469 5.2875C39.2625 5.71875 40.0688 6.24375 40.9031 7.07812C41.7469 7.92188 42.2625 8.71875 42.6938 9.83438C43.0219 10.6781 43.4156 11.9531 43.5188 14.2875C43.6313 16.8187 43.6594 17.5781 43.6594 23.9813C43.6594 30.3938 43.6313 31.1531 43.5188 33.675C43.4156 36.0188 43.0219 37.2844 42.6938 38.1281C42.2625 39.2438 41.7375 40.05 40.9031 40.8844C40.0594 41.7281 39.2625 42.2438 38.1469 42.675C37.3031 43.0031 36.0281 43.3969 33.6938 43.5C31.1625 43.6125 30.4031 43.6406 24 43.6406C17.5875 43.6406 16.8281 43.6125 14.3063 43.5C11.9625 43.3969 10.6969 43.0031 9.85313 42.675C8.7375 42.2438 7.93125 41.7188 7.09688 40.8844C6.25313 40.0406 5.7375 39.2438 5.30625 38.1281C4.97813 37.2844 4.58438 36.0094 4.48125 33.675C4.36875 31.1438 4.34063 30.3844 4.34063 23.9813C4.34063 17.5688 4.36875 16.8094 4.48125 14.2875C4.58438 11.9437 4.97813 10.6781 5.30625 9.83438C5.7375 8.71875 6.2625 7.9125 7.09688 7.07812C7.94063 6.23438 8.7375 5.71875 9.85313 5.2875C10.6969 4.95938 11.9719 4.56562 14.3063 4.4625C16.8281 4.35 17.5875 4.32187 24 4.32187ZM24 0C17.4844 0 16.6688 0.028125 14.1094 0.140625C11.5594 0.253125 9.80625 0.665625 8.2875 1.25625C6.70312 1.875 5.3625 2.69062 4.03125 4.03125C2.69063 5.3625 1.875 6.70313 1.25625 8.27813C0.665625 9.80625 0.253125 11.55 0.140625 14.1C0.028125 16.6687 0 17.4844 0 24C0 30.5156 0.028125 31.3312 0.140625 33.8906C0.253125 36.4406 0.665625 38.1938 1.25625 39.7125C1.875 41.2969 2.69063 42.6375 4.03125 43.9688C5.3625 45.3 6.70313 46.125 8.27813 46.7344C9.80625 47.325 11.55 47.7375 14.1 47.85C16.6594 47.9625 17.475 47.9906 23.9906 47.9906C30.5063 47.9906 31.3219 47.9625 33.8813 47.85C36.4313 47.7375 38.1844 47.325 39.7031 46.7344C41.2781 46.125 42.6188 45.3 43.95 43.9688C45.2812 42.6375 46.1063 41.2969 46.7156 39.7219C47.3063 38.1938 47.7188 36.45 47.8313 33.9C47.9438 31.3406 47.9719 30.525 47.9719 24.0094C47.9719 17.4938 47.9438 16.6781 47.8313 14.1188C47.7188 11.5688 47.3063 9.81563 46.7156 8.29688C46.125 6.70312 45.3094 5.3625 43.9688 4.03125C42.6375 2.7 41.2969 1.875 39.7219 1.26562C38.1938 0.675 36.45 0.2625 33.9 0.15C31.3313 0.028125 30.5156 0 24 0Z" fill="currentColor"></path>
+                                                                                    <path d="M24 11.6719C17.1938 11.6719 11.6719 17.1938 11.6719 24C11.6719 30.8062 17.1938 36.3281 24 36.3281C30.8062 36.3281 36.3281 30.8062 36.3281 24C36.3281 17.1938 30.8062 11.6719 24 11.6719ZM24 31.9969C19.5844 31.9969 16.0031 28.4156 16.0031 24C16.0031 19.5844 19.5844 16.0031 24 16.0031C28.4156 16.0031 31.9969 19.5844 31.9969 24C31.9969 28.4156 28.4156 31.9969 24 31.9969Z" fill="#3B3B3B"></path>
+                                                                                    <path d="M39.6937 11.1843C39.6937 12.778 38.4 14.0624 36.8156 14.0624C35.2219 14.0624 33.9375 12.7687 33.9375 11.1843C33.9375 9.59053 35.2313 8.30615 36.8156 8.30615C38.4 8.30615 39.6937 9.5999 39.6937 11.1843Z" fill="currentColor"></path>
+                                                                                </g>
+                                                                            </svg>
+                                                                        </div>
+                                                                        <span class="ml-3">Instagram</span>
+                                                                    </button>
+
+                                                                )}
+                                                            </Menu.Item>
+                                                        </div>
+
+                                                    </Menu.Items>
+                                                </Transition>
+                                            </Menu>
+
+
+                                            <div>
+                                                <Menu as="div" className="relative inline-block text-left">
+                                                    <div>
+                                                        <Menu.Button class="text-neutral-500 flex items-center justify-center rounded-full h-9 w-9 bg-neutral-100 hover:bg-neutral-200 focus:outline-none" title="More" id="headlessui-menu-button-:rem:" type="button" aria-haspopup="menu" aria-expanded="false" data-headlessui-state="">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" data-slot="icon" class="h-5 w-5">
+                                                                <path fill-rule="evenodd" d="M4.5 12a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0Zm6 0a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0Zm6 0a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0Z" clip-rule="evenodd"></path>
+                                                            </svg>
+                                                        </Menu.Button>
+                                                    </div>
                                                     <Transition
                                                         as={Fragment}
-                                                        enter="transition ease-out duration-300 transform"
-                                                        enterFrom="opacity-0 translate-y-1"
-                                                        enterTo="opacity-100 translate-y-0"
-                                                        leave="transition ease-in duration-200 transform"
-                                                        leaveFrom="opacity-100 translate-y-0"
-                                                        leaveTo="opacity-0 translate-y-1"
+                                                        enter="transition ease-out duration-100"
+                                                        enterFrom="transform opacity-0 scale-95"
+                                                        enterTo="transform opacity-100 scale-100"
+                                                        leave="transition ease-in duration-75"
+                                                        leaveFrom="transform opacity-100 scale-100"
+                                                        leaveTo="transform opacity-0 scale-95"
                                                     >
-                                                        <Popover.Panel class="absolute origin-top-right right-0 w-56 mt-2 bg-white rounded-2xl divide-y divide-neutral-100 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none z-30">
-                                                            <div class="px-1 py-3 text-sm text-neutral-6000" role="none">
-                                                                <div data-menu-item-id="copylink" id="headlessui-menu-item-:rfa:" role="menuitem" tabindex="-1" data-headlessui-state="">
-                                                                    <button class="flex items-center rounded-xl w-full px-3 py-2 hover:bg-neutral-100 hover:text-neutral-900 truncate focus:outline-none">
-                                                                        <div>
-                                                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                                                                                <path stroke-linecap="round" stroke-linejoin="round" d="M11.35 3.836c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75 2.25 2.25 0 00-.1-.664m-5.8 0A2.251 2.251 0 0113.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m8.9-4.414c.376.023.75.05 1.124.08 1.131.094 1.976 1.057 1.976 2.192V16.5A2.25 2.25 0 0118 18.75h-2.25m-7.5-10.5H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V18.75m-7.5-10.5h6.375c.621 0 1.125.504 1.125 1.125v9.375m-8.25-3l1.5 1.5 3-3.75"></path>
-                                                                            </svg>
-                                                                        </div>
-                                                                        <span class="ml-3">Copy link</span>
-                                                                    </button>
-                                                                </div>
-                                                                <div data-menu-item-id="commentThisArticle" id="headlessui-menu-item-:rfb:" role="menuitem" tabindex="-1" data-headlessui-state="">
-                                                                    <button class="flex items-center rounded-xl w-full px-3 py-2 hover:bg-neutral-100 hover:text-neutral-900 truncate focus:outline-none">
-                                                                        <div>
-                                                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                                                                                <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 01.865-.501 48.172 48.172 0 003.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z"></path>
-                                                                            </svg>
-                                                                        </div>
-                                                                        <span class="ml-3">Comment this article</span>
-                                                                    </button>
-                                                                </div>
-                                                                <div data-menu-item-id="hideThisAuthor" id="headlessui-menu-item-:rfc:" role="menuitem" tabindex="-1" data-headlessui-state="">
-                                                                    <button class="flex items-center rounded-xl w-full px-3 py-2 hover:bg-neutral-100 hover:text-neutral-900 truncate focus:outline-none">
-                                                                        <div>
-                                                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                                                                                <path stroke-linecap="round" stroke-linejoin="round" d="M3.98 8.223A10.477 10.477 0 001.934 12C3.226 16.338 7.244 19.5 12 19.5c.993 0 1.953-.138 2.863-.395M6.228 6.228A10.45 10.45 0 0112 4.5c4.756 0 8.773 3.162 10.065 7.498a10.523 10.523 0 01-4.293 5.774M6.228 6.228L3 3m3.228 3.228l3.65 3.65m7.894 7.894L21 21m-3.228-3.228l-3.65-3.65m0 0a3 3 0 10-4.243-4.243m4.242 4.242L9.88 9.88"></path>
-                                                                            </svg>
-                                                                        </div>
-                                                                        <span class="ml-3">Hide this author</span>
-                                                                    </button>
-                                                                </div>
-                                                                <div data-menu-item-id="reportThisArticle" id="headlessui-menu-item-:rfd:" role="menuitem" tabindex="-1" data-headlessui-state="">
-                                                                    <button class="flex items-center rounded-xl w-full px-3 py-2 hover:bg-neutral-100 hover:text-neutral-900 truncate focus:outline-none">
-                                                                        <div>
-                                                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                                                                                <path stroke-linecap="round" stroke-linejoin="round" d="M3 3v1.5M3 21v-6m0 0l2.77-.693a9 9 0 016.208.682l.108.054a9 9 0 006.086.71l3.114-.732a48.524 48.524 0 01-.005-10.499l-3.11-.732a9 9 0 01-6.085.711l-.108.054a9 9 0 00-6.208-.682L3 4.5M3 15V4.5"></path>
-                                                                            </svg>
-                                                                        </div>
-                                                                        <span class="ml-3">Report this article</span>
-                                                                    </button>
-                                                                </div>
-                                                            </div>
-                                                        </Popover.Panel>
-                                                    </Transition>
 
-                                                </Popover>
-                                                <div class="nc-NcModal"></div>
-                                                <div class="nc-NcModal"></div>
+                                                        <Menu.Items className="absolute right-0 mt-2 w-56  origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black/5 focus:outline-none">
+                                                            <div className="px-1 py-2 ">
+                                                                <Menu.Item>
+                                                                    {({ active }) => (
+                                                                        <button
+                                                                            className={`${active ? 'bg-neutral-100 text-neutral-900' : 'text-gray-900'
+                                                                                } flex items-center rounded-xl text-sm w-full px-3 py-2 truncate focus:outline-none`}
+                                                                        >
+                                                                            <div>
+                                                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+                                                                                    <path stroke-linecap="round" stroke-linejoin="round" d="M11.35 3.836c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75 2.25 2.25 0 00-.1-.664m-5.8 0A2.251 2.251 0 0113.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m8.9-4.414c.376.023.75.05 1.124.08 1.131.094 1.976 1.057 1.976 2.192V16.5A2.25 2.25 0 0118 18.75h-2.25m-7.5-10.5H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V18.75m-7.5-10.5h6.375c.621 0 1.125.504 1.125 1.125v9.375m-8.25-3l1.5 1.5 3-3.75"></path>
+                                                                                </svg>
+                                                                            </div>
+                                                                            <span class="ml-3">Copy link</span>
+                                                                        </button>
+
+                                                                    )}
+                                                                </Menu.Item>
+                                                                <Menu.Item>
+                                                                    {({ active }) => (
+                                                                        <button
+                                                                            className={`${active ? 'bg-neutral-100 text-neutral-900' : 'text-gray-900'
+                                                                                } flex items-center rounded-xl text-sm w-full px-3 py-2 truncate focus:outline-none`}
+                                                                        >
+                                                                            <div>
+                                                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+                                                                                    <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 01.865-.501 48.172 48.172 0 003.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z"></path>
+                                                                                </svg>
+                                                                            </div>
+                                                                            <span class="ml-3">Comment this article</span>
+                                                                        </button>
+
+                                                                    )}
+                                                                </Menu.Item>
+                                                                <Menu.Item>
+                                                                    {({ active }) => (
+                                                                        <button
+                                                                            className={`${active ? 'bg-neutral-100 text-neutral-900' : 'text-gray-900'
+                                                                                } flex items-center rounded-xl w-full text-sm px-3 py-2 truncate focus:outline-none`}
+                                                                        >
+                                                                            <div>
+                                                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+                                                                                    <path stroke-linecap="round" stroke-linejoin="round" d="M3 3v1.5M3 21v-6m0 0l2.77-.693a9 9 0 016.208.682l.108.054a9 9 0 006.086.71l3.114-.732a48.524 48.524 0 01-.005-10.499l-3.11-.732a9 9 0 01-6.085.711l-.108.054a9 9 0 00-6.208-.682L3 4.5M3 15V4.5"></path>
+                                                                                </svg>
+                                                                            </div>
+                                                                            <span class="ml-3">Report this article</span>
+                                                                        </button>
+
+                                                                    )}
+                                                                </Menu.Item>
+                                                            </div>
+
+                                                        </Menu.Items>
+                                                    </Transition>
+                                                </Menu>
+
+
                                             </div>
                                         </div>
                                     </div>
@@ -136,7 +225,7 @@ export const Single = () => {
                     </div>
                 </header >
                 <div class="">
-                    <div class="my-10 sm:my-12 relative aspect-w-16 aspect-h-12 md:aspect-h-9 lg:aspect-h-6">
+                    <div class="my-10 -z-10 sm:my-12 relative aspect-w-16 aspect-h-12 md:aspect-h-9 lg:aspect-h-6">
                         <img src={topic11} alt="" sizes="100vw" class=" object-cover  inset-0 w-full h-full" />
                     </div>
                 </div>
@@ -219,12 +308,65 @@ export const Single = () => {
                                     <div className="flex-grow flex flex-col p-4 ml-2 text-sm  border-neutral-200 rounded-xl sm:ml-3 sm:text-base border">
                                         <div className="relative flex items-center pr-6">
                                             <div className="absolute -right-3 -top-3">
-                                                <div className="relative inline-block text-left" data-headlessui-state="">
-                                                    <button className="p-2 text-neutral-500 flex items-center justify-center rounded-lg hover:text-neutral-800 sm:hover:bg-neutral-100 focus:outline-none" title="More" id="headlessui-menu-button-:rc:" type="button" aria-haspopup="menu" aria-expanded="false" data-headlessui-state="">
-                                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" data-slot="icon" className="h-6 w-6">
-                                                            <path fill-rule="evenodd" d="M4.5 12a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0Zm6 0a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0Zm6 0a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0Z" clip-rule="evenodd"></path>
-                                                        </svg>
-                                                    </button>
+                                            <div>
+                                                    <Menu as="div" className="relative inline-block text-left">
+                                                        <div>
+                                                            <Menu.Button className="p-2 text-neutral-500 flex items-center justify-center rounded-lg hover:text-neutral-800 sm:hover:bg-neutral-100 focus:outline-none" title="More" id="headlessui-menu-button-:rc:" type="button" aria-haspopup="menu" aria-expanded="false" data-headlessui-state="">
+                                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" data-slot="icon" className="h-6 w-6">
+                                                                    <path fill-rule="evenodd" d="M4.5 12a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0Zm6 0a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0Zm6 0a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0Z" clip-rule="evenodd"></path>
+                                                                </svg>
+                                                            </Menu.Button>
+                                                        </div>
+                                                        <Transition
+                                                            as={Fragment}
+                                                            enter="transition ease-out duration-100"
+                                                            enterFrom="transform opacity-0 scale-95"
+                                                            enterTo="transform opacity-100 scale-100"
+                                                            leave="transition ease-in duration-75"
+                                                            leaveFrom="transform opacity-100 scale-100"
+                                                            leaveTo="transform opacity-0 scale-95"
+                                                        >
+
+                                                            <Menu.Items className="absolute right-0 mt-2 w-56  origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black/5 focus:outline-none">
+                                                                <div className="px-1 py-2 ">
+                                                                    <Menu.Item>
+                                                                        {({ active }) => (
+                                                                            <button
+                                                                                className={`${active ? 'bg-neutral-100 text-neutral-900' : 'text-gray-900'
+                                                                                    } flex items-center rounded-xl text-sm w-full px-3 py-2 truncate focus:outline-none`}
+                                                                            >
+                                                                                <div>
+                                                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+                                                                                        <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5m-13.5-9L12 3m0 0l4.5 4.5M12 3v13.5"></path>
+                                                                                    </svg>
+                                                                                </div>
+                                                                                <span class="ml-3">Reply</span>
+                                                                            </button>
+
+                                                                        )}
+                                                                    </Menu.Item>
+                                                                    <Menu.Item>
+                                                                        {({ active }) => (
+                                                                            <button
+                                                                                className={`${active ? 'bg-neutral-100 text-neutral-900' : 'text-gray-900'
+                                                                                    } flex items-center rounded-xl text-sm w-full px-3 py-2 truncate focus:outline-none`}
+                                                                            >
+                                                                                <div>
+                                                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+                                                                                        <path stroke-linecap="round" stroke-linejoin="round" d="M3 3v1.5M3 21v-6m0 0l2.77-.693a9 9 0 016.208.682l.108.054a9 9 0 006.086.71l3.114-.732a48.524 48.524 0 01-.005-10.499l-3.11.732a9 9 0 01-6.085-.711l-.108-.054a9 9 0 00-6.208-.682L3 4.5M3 15V4.5"></path>
+                                                                                    </svg>
+                                                                                </div>
+                                                                                <span class="ml-3">Report abuse</span>
+                                                                            </button>
+
+                                                                        )}
+                                                                    </Menu.Item>
+
+                                                                </div>
+
+                                                            </Menu.Items>
+                                                        </Transition>
+                                                    </Menu>
                                                 </div>
                                             </div>
                                             <a className="flex-shrink-0 font-semibold text-neutral-800" href="/author/the-demo-author-slug">Truelock Alric</a>
@@ -256,12 +398,65 @@ export const Single = () => {
                                     <div className="flex-grow flex flex-col p-4 ml-2 text-sm  border-neutral-200 rounded-xl sm:ml-3 sm:text-base border">
                                         <div className="relative flex items-center pr-6">
                                             <div className="absolute -right-3 -top-3">
-                                                <div className="relative inline-block text-left" data-headlessui-state="">
-                                                    <button className="p-2 text-neutral-500 flex items-center justify-center rounded-lg hover:text-neutral-800 sm:hover:bg-neutral-100 focus:outline-none" title="More" id="headlessui-menu-button-:rc:" type="button" aria-haspopup="menu" aria-expanded="false" data-headlessui-state="">
-                                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" data-slot="icon" className="h-6 w-6">
-                                                            <path fill-rule="evenodd" d="M4.5 12a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0Zm6 0a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0Zm6 0a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0Z" clip-rule="evenodd"></path>
-                                                        </svg>
-                                                    </button>
+                                                <div>
+                                                    <Menu as="div" className="relative inline-block text-left">
+                                                        <div>
+                                                            <Menu.Button className="p-2 text-neutral-500 flex items-center justify-center rounded-lg hover:text-neutral-800 sm:hover:bg-neutral-100 focus:outline-none" title="More" id="headlessui-menu-button-:rc:" type="button" aria-haspopup="menu" aria-expanded="false" data-headlessui-state="">
+                                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" data-slot="icon" className="h-6 w-6">
+                                                                    <path fill-rule="evenodd" d="M4.5 12a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0Zm6 0a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0Zm6 0a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0Z" clip-rule="evenodd"></path>
+                                                                </svg>
+                                                            </Menu.Button>
+                                                        </div>
+                                                        <Transition
+                                                            as={Fragment}
+                                                            enter="transition ease-out duration-100"
+                                                            enterFrom="transform opacity-0 scale-95"
+                                                            enterTo="transform opacity-100 scale-100"
+                                                            leave="transition ease-in duration-75"
+                                                            leaveFrom="transform opacity-100 scale-100"
+                                                            leaveTo="transform opacity-0 scale-95"
+                                                        >
+
+                                                            <Menu.Items className="absolute right-0 mt-2 w-56  origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black/5 focus:outline-none">
+                                                                <div className="px-1 py-2 ">
+                                                                    <Menu.Item>
+                                                                        {({ active }) => (
+                                                                            <button
+                                                                                className={`${active ? 'bg-neutral-100 text-neutral-900' : 'text-gray-900'
+                                                                                    } flex items-center rounded-xl text-sm w-full px-3 py-2 truncate focus:outline-none`}
+                                                                            >
+                                                                                <div>
+                                                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+                                                                                        <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5m-13.5-9L12 3m0 0l4.5 4.5M12 3v13.5"></path>
+                                                                                    </svg>
+                                                                                </div>
+                                                                                <span class="ml-3">Reply</span>
+                                                                            </button>
+
+                                                                        )}
+                                                                    </Menu.Item>
+                                                                    <Menu.Item>
+                                                                        {({ active }) => (
+                                                                            <button
+                                                                                className={`${active ? 'bg-neutral-100 text-neutral-900' : 'text-gray-900'
+                                                                                    } flex items-center rounded-xl text-sm w-full px-3 py-2 truncate focus:outline-none`}
+                                                                            >
+                                                                                <div>
+                                                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+                                                                                        <path stroke-linecap="round" stroke-linejoin="round" d="M3 3v1.5M3 21v-6m0 0l2.77-.693a9 9 0 016.208.682l.108.054a9 9 0 006.086.71l3.114-.732a48.524 48.524 0 01-.005-10.499l-3.11.732a9 9 0 01-6.085-.711l-.108-.054a9 9 0 00-6.208-.682L3 4.5M3 15V4.5"></path>
+                                                                                    </svg>
+                                                                                </div>
+                                                                                <span class="ml-3">Report abuse</span>
+                                                                            </button>
+
+                                                                        )}
+                                                                    </Menu.Item>
+
+                                                                </div>
+
+                                                            </Menu.Items>
+                                                        </Transition>
+                                                    </Menu>
                                                 </div>
                                             </div>
                                             <a className="flex-shrink-0 font-semibold text-neutral-800" href="/author/the-demo-author-slug">Truelock Alric</a>
@@ -293,12 +488,65 @@ export const Single = () => {
                                     <div className="flex-grow flex flex-col p-4 ml-2 text-sm  border-neutral-200 rounded-xl sm:ml-3 sm:text-base border">
                                         <div className="relative flex items-center pr-6">
                                             <div className="absolute -right-3 -top-3">
-                                                <div className="relative inline-block text-left" data-headlessui-state="">
-                                                    <button className="p-2 text-neutral-500 flex items-center justify-center rounded-lg hover:text-neutral-800 sm:hover:bg-neutral-100 focus:outline-none" title="More" id="headlessui-menu-button-:rc:" type="button" aria-haspopup="menu" aria-expanded="false" data-headlessui-state="">
-                                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" data-slot="icon" className="h-6 w-6">
-                                                            <path fill-rule="evenodd" d="M4.5 12a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0Zm6 0a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0Zm6 0a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0Z" clip-rule="evenodd"></path>
-                                                        </svg>
-                                                    </button>
+                                            <div>
+                                                    <Menu as="div" className="relative inline-block text-left">
+                                                        <div>
+                                                            <Menu.Button className="p-2 text-neutral-500 flex items-center justify-center rounded-lg hover:text-neutral-800 sm:hover:bg-neutral-100 focus:outline-none" title="More" id="headlessui-menu-button-:rc:" type="button" aria-haspopup="menu" aria-expanded="false" data-headlessui-state="">
+                                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" data-slot="icon" className="h-6 w-6">
+                                                                    <path fill-rule="evenodd" d="M4.5 12a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0Zm6 0a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0Zm6 0a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0Z" clip-rule="evenodd"></path>
+                                                                </svg>
+                                                            </Menu.Button>
+                                                        </div>
+                                                        <Transition
+                                                            as={Fragment}
+                                                            enter="transition ease-out duration-100"
+                                                            enterFrom="transform opacity-0 scale-95"
+                                                            enterTo="transform opacity-100 scale-100"
+                                                            leave="transition ease-in duration-75"
+                                                            leaveFrom="transform opacity-100 scale-100"
+                                                            leaveTo="transform opacity-0 scale-95"
+                                                        >
+
+                                                            <Menu.Items className="absolute right-0 mt-2 w-56  origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black/5 focus:outline-none">
+                                                                <div className="px-1 py-2 ">
+                                                                    <Menu.Item>
+                                                                        {({ active }) => (
+                                                                            <button
+                                                                                className={`${active ? 'bg-neutral-100 text-neutral-900' : 'text-gray-900'
+                                                                                    } flex items-center rounded-xl text-sm w-full px-3 py-2 truncate focus:outline-none`}
+                                                                            >
+                                                                                <div>
+                                                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+                                                                                        <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5m-13.5-9L12 3m0 0l4.5 4.5M12 3v13.5"></path>
+                                                                                    </svg>
+                                                                                </div>
+                                                                                <span class="ml-3">Reply</span>
+                                                                            </button>
+
+                                                                        )}
+                                                                    </Menu.Item>
+                                                                    <Menu.Item>
+                                                                        {({ active }) => (
+                                                                            <button
+                                                                                className={`${active ? 'bg-neutral-100 text-neutral-900' : 'text-gray-900'
+                                                                                    } flex items-center rounded-xl text-sm w-full px-3 py-2 truncate focus:outline-none`}
+                                                                            >
+                                                                                <div>
+                                                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+                                                                                        <path stroke-linecap="round" stroke-linejoin="round" d="M3 3v1.5M3 21v-6m0 0l2.77-.693a9 9 0 016.208.682l.108.054a9 9 0 006.086.71l3.114-.732a48.524 48.524 0 01-.005-10.499l-3.11.732a9 9 0 01-6.085-.711l-.108-.054a9 9 0 00-6.208-.682L3 4.5M3 15V4.5"></path>
+                                                                                    </svg>
+                                                                                </div>
+                                                                                <span class="ml-3">Report abuse</span>
+                                                                            </button>
+
+                                                                        )}
+                                                                    </Menu.Item>
+
+                                                                </div>
+
+                                                            </Menu.Items>
+                                                        </Transition>
+                                                    </Menu>
                                                 </div>
                                             </div>
                                             <a className="flex-shrink-0 font-semibold text-neutral-800" href="/author/the-demo-author-slug">Truelock Alric</a>
@@ -330,12 +578,65 @@ export const Single = () => {
                                     <div className="flex-grow flex flex-col p-4 ml-2 text-sm  border-neutral-200 rounded-xl sm:ml-3 sm:text-base border">
                                         <div className="relative flex items-center pr-6">
                                             <div className="absolute -right-3 -top-3">
-                                                <div className="relative inline-block text-left" data-headlessui-state="">
-                                                    <button className="p-2 text-neutral-500 flex items-center justify-center rounded-lg hover:text-neutral-800 sm:hover:bg-neutral-100 focus:outline-none" title="More" id="headlessui-menu-button-:rc:" type="button" aria-haspopup="menu" aria-expanded="false" data-headlessui-state="">
-                                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" data-slot="icon" className="h-6 w-6">
-                                                            <path fill-rule="evenodd" d="M4.5 12a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0Zm6 0a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0Zm6 0a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0Z" clip-rule="evenodd"></path>
-                                                        </svg>
-                                                    </button>
+                                            <div>
+                                                    <Menu as="div" className="relative inline-block text-left">
+                                                        <div>
+                                                            <Menu.Button className="p-2 text-neutral-500 flex items-center justify-center rounded-lg hover:text-neutral-800 sm:hover:bg-neutral-100 focus:outline-none" title="More" id="headlessui-menu-button-:rc:" type="button" aria-haspopup="menu" aria-expanded="false" data-headlessui-state="">
+                                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" data-slot="icon" className="h-6 w-6">
+                                                                    <path fill-rule="evenodd" d="M4.5 12a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0Zm6 0a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0Zm6 0a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0Z" clip-rule="evenodd"></path>
+                                                                </svg>
+                                                            </Menu.Button>
+                                                        </div>
+                                                        <Transition
+                                                            as={Fragment}
+                                                            enter="transition ease-out duration-100"
+                                                            enterFrom="transform opacity-0 scale-95"
+                                                            enterTo="transform opacity-100 scale-100"
+                                                            leave="transition ease-in duration-75"
+                                                            leaveFrom="transform opacity-100 scale-100"
+                                                            leaveTo="transform opacity-0 scale-95"
+                                                        >
+
+                                                            <Menu.Items className="absolute right-0 mt-2 w-56  origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black/5 focus:outline-none">
+                                                                <div className="px-1 py-2 ">
+                                                                    <Menu.Item>
+                                                                        {({ active }) => (
+                                                                            <button
+                                                                                className={`${active ? 'bg-neutral-100 text-neutral-900' : 'text-gray-900'
+                                                                                    } flex items-center rounded-xl text-sm w-full px-3 py-2 truncate focus:outline-none`}
+                                                                            >
+                                                                                <div>
+                                                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+                                                                                        <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5m-13.5-9L12 3m0 0l4.5 4.5M12 3v13.5"></path>
+                                                                                    </svg>
+                                                                                </div>
+                                                                                <span class="ml-3">Reply</span>
+                                                                            </button>
+
+                                                                        )}
+                                                                    </Menu.Item>
+                                                                    <Menu.Item>
+                                                                        {({ active }) => (
+                                                                            <button
+                                                                                className={`${active ? 'bg-neutral-100 text-neutral-900' : 'text-gray-900'
+                                                                                    } flex items-center rounded-xl text-sm w-full px-3 py-2 truncate focus:outline-none`}
+                                                                            >
+                                                                                <div>
+                                                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+                                                                                        <path stroke-linecap="round" stroke-linejoin="round" d="M3 3v1.5M3 21v-6m0 0l2.77-.693a9 9 0 016.208.682l.108.054a9 9 0 006.086.71l3.114-.732a48.524 48.524 0 01-.005-10.499l-3.11.732a9 9 0 01-6.085-.711l-.108-.054a9 9 0 00-6.208-.682L3 4.5M3 15V4.5"></path>
+                                                                                    </svg>
+                                                                                </div>
+                                                                                <span class="ml-3">Report abuse</span>
+                                                                            </button>
+
+                                                                        )}
+                                                                    </Menu.Item>
+
+                                                                </div>
+
+                                                            </Menu.Items>
+                                                        </Transition>
+                                                    </Menu>
                                                 </div>
                                             </div>
                                             <a className="flex-shrink-0 font-semibold text-neutral-800" href="/author/the-demo-author-slug">Truelock Alric</a>
@@ -883,3 +1184,4 @@ export const Single = () => {
         </>
     )
 }
+
