@@ -55,7 +55,6 @@ const Index = () => {
         {/* <Route path='/*' element={<NotFound />}></Route> */}
       </Routes>
 
-      <Footer />
 
     </>
   )
